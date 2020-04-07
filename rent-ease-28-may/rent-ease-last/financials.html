@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Financials</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap-4.3/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+	
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/financials-style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/sidebar-style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/common-style.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+
+
+</head>
+<body>
+<div style="overflow-x: hidden;">
+	
+<header>
+ <!-- navbar starts -->
+		<nav id="navbar-cleaning" class="navbar navbar-expand-md navbar-light shadow fixed-top">
+		  <a class="navbar-brand" href="index.html"><img src="assets/images/logo-black1.png"></a>
+
+		   <button type="button" id="sidebarCollapse" class="navbar-btn btn-style-sidebar d-lg-none mr-auto">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+            </button>
+
+		  
+		  <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  	<li class="nav-item mx-auto" id="seacrh-input">
+				<div class="form-group has-search" >
+				    <span class="fa fa-search form-control-feedback"></span>
+				    <input type="text" class="form-control form-control" placeholder="Search Appartment..">
+				</div>
+			</li>
+			
+		    <ul id="custom-ul" class="navbar-nav ml-auto">
+		    
+			     <li class="nav-item" >
+			         <a class="nav-link" href="view-profile.html">Hello John<i class="fas fa-angle-down ml-2"></i>
+		        </a>
+			    </li>
+		    </ul>
+		  </div>
+		</nav>
+		<!-- navbar ends -->
+
+
+		
+</header>
+<!-- Header ends -->
+
+
+<!-- main body starts -->
+<main class="wrapper nav-top-margin ">
+			<!-- left side bar portion starts -->
+		<nav id="sidebar">
+            <div class="sidebar-header">
+                <h3 class="dark-yellow-color">Landlords <span class="d-block">Pages</span></h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                
+                <li >
+                    <a href="landlord-dashboard.html" class="font-weight-light">Dashboard</a>
+                </li>
+                <li >
+                    <a href="rent-application.html" class="font-weight-light">Rent Applications</a>
+                </li>
+                <li>
+                    <a href="properties-listing.html" class="font-weight-light">Properties Listing</a>
+                </li>
+                <li class="active">
+                    <a href="financials.html" class="font-weight-light">Financials</a>
+                </li>
+                
+                <li>
+                    <a href="landlord-messages.html" class="font-weight-light">Messages</a>
+                </li>
+                <li>
+                    <a href="#" class="font-weight-light">Account Settings</a>
+                </li>
+                <li>
+                    <a href="index.html" class="font-weight-light">Logout</a>
+                </li>
+            </ul>
+        </nav>
+	<!-- left sidebar portion ends -->
+
+	<!-- main content starts -->
+	<div id="content">
+		<div class="row">
+			<div class="col-12">
+				<h5 class="reddish-color font-weight-bold">
+					Financials
+					<span>
+					<a href="#" id="btn-withdraw-form" class="btn btn-sm font-weight-light text-white btn-withdraw-cash float-right">Withdraw Cash</a>
+				</span>	
+				</h5>
+			</div>
+		</div>
+		<div class="row mt-xl-4 mt-5">
+			<div class="col-sm-4 col-12 mt-sm-0 mt-4">
+				<div class="card m-lr">
+				    <div class="card-body text-center">
+				    	<h5 class="hard-brown">
+				    		<small>
+				    		<span>Rent Total</span>
+				    		</small>
+				    	</h5>
+				    	<h2 class="reddish-color pt-5 font-weight-bold">60</h2>
+				    </div>
+				 </div>
+			</div>
+			<div class="col-sm-4 col-12 mt-sm-0 mt-4">
+				<div class="card m-lr">
+				    <div class="card-body text-center">
+				    	<h5 class="hard-brown">
+				    		<small class="font-9">
+				    		<span >Rent Paying Masters</span>
+				    		</small>
+				    	</h5>
+				    	<h2 class="reddish-color font-weight-bold pt-5">20</h2>
+				    </div>
+				 </div>
+			</div>
+
+			<div class="col-sm-4 col-12 mt-sm-0 mt-4" >
+				<div class="card m-lr" style="border:3px solid rgb(244,18,76) ; ">
+				    <div class="card-body text-center m-1 p-2" style="background-color: rgb(244,18,76) !important;">
+				    	<h5 class="text-white">
+				    		<small class="font-9">
+				    		<span>Rents with less than</span>
+				    		<span class="d-block">3 months left</span>
+				    		</small>
+				    	</h5>
+				    	<h2 class="text-white font-weight-bold pt-1-9">5</h2>
+				    </div>
+				 </div>
+			</div>
+
+		</div>	
+		
+		<!-- rent applications ends -->
+			
+        <!-- Table starts -->
+		<div id="rent-table" class="row">
+			<div  class="col-xl-11 col-12 table-responsive table-wrapper" >
+				<table  class="table mt-3 table-borderless">
+				    <thead class="text-white" style="background-color: rgb(244,18,76); ">
+				      <tr >
+				        <th class="font-weight-light">S/N</th>
+				        <th class="font-weight-light">Transaction Date</th>
+				        <th class="font-weight-light">Prayers's name</th>
+				        <th class="font-weight-light text-center">Amount Paid</th>
+				        <th class="font-weight-light text-center">View report</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+					    <tr>
+					       <td>1</td>
+					       <td>09/02/2019</td>
+					       <td>Oni David</td>
+					       <td class="reddish-color text-center">$2500</td>
+					       <td class="text-center" style="text-decoration: underline;">1 year rent for 2 bedrooms flat</td>
+					    </tr>
+					    <tr>
+					       <td>1</td>
+					       <td>09/02/2019</td>
+					       <td>Oni David</td>
+					       <td class="reddish-color text-center">$1500</td>
+					       <td class="text-center" style="text-decoration: underline;">1 year rent for 2 bedrooms flat</td>
+					    </tr>
+				    </tbody>
+			  </table>
+			</div>
+		</div>	
+	<!-- rent applications ends -->
+      </div>
+	<!-- main content ends	 -->
+
+</main>
+<!-- main body ends -->
+
+
+<section id="withdraw-form-container" class="container-fluid mt-5 p-sm-5 p-2 shadow" style="display: none">
+	<div class="row justify-content-center" style="position:static; ">
+		<div class="col-xl-6 col-md-9">
+			<div class="row">
+				<div class="col-12 pl-0 pr-0">
+					<h6 class="reddish-color font-weight-bold text-center">Withdraw Cash</h6>		
+				</div>
+			</div>
+
+			<div class="row mt-4">
+				<div class="col-12 pl-0 pr-0">
+					<label class="radio-wrapper hard-brown ">Direct bank Transfer
+						<input type="radio" name="radio" checked="checked">
+						<span class="checkmark" ></span>
+					    <span class="float-right" style="color: rgb(210,210,210);">$1.99 rentease fee</span>
+					</label>
+				</div>	
+			</div>
+
+			<div class="row mt-3">
+				<div class="col-12 pl-0 pr-0">
+					<form id="withdraw-form">
+
+					<!-- Bank row starts -->
+					<div class="form-row">
+							<div class="col form-group " id="select">
+								<label class="hard-brown">Bank</label>
+									  <select class="form-control" id="exampleFormControlSelect1">
+								      <option>Select Bank</option>
+								      <option>2</option>
+								      <option>3</option>
+								      <option>4</option>
+								      <option>5</option>
+							    	  </select> 
+							</div>
+						</div>						
+
+						<!-- Account number row -->
+						<div class="form-row">
+							<div class="col form-group">
+								<label class="hard-brown">Account number</label>
+									<input type="price" class="form-control" >
+							</div>
+						</div>
+						<!-- enter amount -->
+						<div class="form-row">
+							<div class="col form-group">
+								<label class="hard-brown">Enter Amount</label>
+									<input type="price" class="form-control" >
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="col form-group">
+								<h6 class="hard-brown">or <span class="bar-respon">_________________________________________________________</span></h6>
+							</div>
+						</div>
+						 <!-- paypal -->
+						 <div class="form-row mt-2">
+							<div class="col form-group">
+								<div class="input-group mb-3">
+								  <div class="input-group-prepend">
+								    <span class="input-group-text bg-white pr-0">
+								    	
+								<label class="radio-wrapper pl-radio">
+									<input type="radio" name="radio">
+									<span class="checkmark" style="top: 0px !important;"></span>
+								</label>
+
+								    </span>
+								  </div>
+								  <input type="text" class="form-control border-left-0 border-right-0" aria-label="Amount (to the nearest dollar)" placeholder="Enter Paypal email">
+								  <div class="input-group-append">
+								    <span class="input-group-text bg-white"><img src="assets/images/paypal.png"></span>
+								  </div>
+								</div>
+							</div>	
+						</div>
+
+							<!-- Enter Amount -->
+						<div class="form-row justify-content-center">
+							<div class="col form-group">
+								<label class="reddish-color font-weight-bold">Enter Amount</label>
+									<input type="price" class="form-control" >
+							</div>
+						</div>
+
+
+
+							<!-- check box ends -->
+						    <div class="form-row justify-content-center mt-4">
+								<div class="col form-group"> 
+									<a href="error-page.html" class="btn btn-sm text-white font-weight-light btn-withdraw">Withdraw</a>
+								</div> <!-- form-group end.// -->
+							</div><!-- form-group end.// -->
+
+						</form>
+				</div>				
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+  		<!-- footer starts -->
+	<footer id="footer" class="continer">
+	
+		<div class="row justify-content-center row-custom" >
+				<div class="col-4 ">
+					<h4 class="text-muted pb-2">RentEase</h4>
+					<span>
+	          			<h5>Lorem ipsum dolor amet sit</h5>
+	          			<h5>Lorem ipsum dolor amet sit</h5>
+          			</span>
+				</div>
+          		
+          		<div class="col-4 text-center">
+          			<h4 class="text-muted pb-2">Usefull Links</h4>
+          			<span>
+	          			<a href=""><h5>Vendors</h5></a>
+	          			<a href=""><h5>Contact Us</h5></a>
+	          			<a href=""><h5>FAQ</h5></a>
+	          			<a href=""><h5>About Us</h5></a>	
+          			</span>
+          		</div>
+ 				
+ 				<div class="col-4 text-right tumblr-icon-head-p">
+          			<h4 class="text-muted pb-2 respon-h4">We are social</h4>
+          			<span>
+	          			<h5>
+	          				<a href=""><i class="fab fa-facebook-f text-muted"></i></a>
+	          				<a href=""><i class="fab fa-tumblr text-muted tumblr-icon"></i></a>
+	          				<a href=""><i class="fab fa-linkedin-in text-muted "></i></a>		
+	          			</h5>
+          			</span>
+          		</div>       		
+		</div>
+		<div class="row">
+			<div class="col-12 mt-lg-0 mt-3">
+			<h6 class="text-muted"><i class="far fa-copyright"></i> RentEase 2018. All rights Reserved</h6>
+			</div>
+		</div>	
+			
+					
+	</footer>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script type="text/javascript" src="assets/bootstrap-4.3\js\bootstrap.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+<script src="assets/js/myScript.js"></script>
+ 
+
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
+<!-- <script src="assets/js/main.js"></script> -->
+
+
+</body>
+</html>

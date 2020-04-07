@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rent-Applications</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap-4.3/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+	
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/rent-application-style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/sidebar-style.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+
+
+</head>
+<body>
+<div style="overflow-x: hidden;">
+	
+
+<header>
+ <!-- navbar starts -->
+		<nav id="navbar-cleaning" class="navbar navbar-expand-md navbar-light shadow fixed-top">
+		  <a class="navbar-brand" href="index.html"><img src="assets/images/logo-black1.png"></a>
+
+		   <button type="button" id="sidebarCollapse" class="navbar-btn btn-style-sidebar d-lg-none mr-auto">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+            </button>
+
+		  
+		  <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  	<li class="nav-item mx-auto" id="seacrh-input">
+				<div class="form-group has-search" >
+				    <span class="fa fa-search form-control-feedback"></span>
+				    <input type="text" class="form-control form-control" placeholder="Search Appartment..">
+				</div>
+			</li>
+			
+		    <ul id="custom-ul" class="navbar-nav ml-auto">
+		    
+			     <li class="nav-item" >
+			         <a class="nav-link" href="view-profile.html">Hello John<i class="fas fa-angle-down ml-2"></i>
+		        </a>
+			    </li>
+		    </ul>
+		  </div>
+		</nav>
+		<!-- navbar ends -->
+
+
+		
+</header>
+<!-- Header ends -->
+
+
+<!-- main body starts -->
+<main class="wrapper nav-top-margin">
+			<!-- left side bar portion starts -->
+		<nav id="sidebar">
+            <div class="sidebar-header">
+                <h3 class="dark-yellow-color">Landlords <span class="d-block">Pages</span></h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                
+                <li >
+                    <a href="landlord-dashboard.html" class="font-weight-light">Dashboard</a>
+                </li>
+                <li class="active">
+                    <a href="#" class="font-weight-light">Rent Applications</a>
+                </li>
+                <li>
+                    <a href="properties-listing.html" class="font-weight-light">Properties Listing</a>
+                </li>
+                <li>
+                    <a href="financials.html" class="font-weight-light">Financials</a>
+                </li>
+                
+                <li>
+                    <a href="landlord-messages.html" class="font-weight-light">Messages</a>
+                </li>
+                <li>
+                    <a href="#" class="font-weight-light">Account Settings</a>
+                </li>
+                <li>
+                    <a href="index.html" class="font-weight-light">Logout</a>
+                </li>
+            </ul>
+        </nav>
+	<!-- left sidebar portion ends -->
+
+	<!-- main content starts -->
+	<div id="content">
+		<div class="row">
+			<div class="col-12">
+				<h5 class="reddish-color font-weight-bold">
+					Rent Applications
+				</h5>
+			</div>
+		</div>
+		<div class="row mt-4">
+			<div class="col-sm-4 col-12 mt-sm-0 mt-4">
+				<div class="card m-lr">
+				    <div class="card-body text-center">
+				    	<h5 class="hard-brown">
+				    		<small>
+				    		<span>Number</span>
+				    		<span class="d-block">of</span>
+				    		<span class="d-block">Applications</span>
+				    		</small>
+				    	</h5>
+				    	<h2 class="reddish-color pt-3 font-weight-bold">60</h2>
+				    </div>
+				 </div>
+			</div>
+			<div class="col-sm-4 col-12 mt-sm-0 mt-4">
+				<div class="card m-lr">
+				    <div class="card-body text-center">
+				    	<h5 class="hard-brown">
+				    		<small>
+				    		<span>Accepted</span>
+				    		<span class="d-block">Applications</span>
+				    		</small>
+				    	</h5>
+				    	<h2 class="reddish-color font-weight-bold pt-accepted">3</h2>
+				    </div>
+				 </div>
+			</div>
+			<div class="col-sm-4 col-12 mt-sm-0 mt-4">
+				<div class="card m-lr">
+				    <div class="card-body text-center">
+				    	<h5 class="hard-brown">
+				    		<small>
+				    		<span>Rejected</span>
+				    		<span class="d-block">Applications</span>
+				    		</small>
+				    	</h5>
+				    	<h2 class="reddish-color font-weight-bold pt-rejected">5</h2>
+				    </div>
+				 </div>
+			</div>
+		</div>	
+		
+		<!-- rent applications ends -->
+			
+        <!-- Table starts -->
+		<div id="rent-table" class="row">
+			<div  id="rent-table-wrapper" class="col-xl-11 col-12 table-responsive">
+				<table  class="table mt-3 table-borderless">
+				    <thead class="text-white" style="background-color: rgb(244,18,76); ">
+				      <tr >
+				        <th class="font-weight-light">S/N</th>
+				        <th class="font-weight-light">Date</th>
+				        <th class="font-weight-light">Applicant's name</th>
+				        <th class="font-weight-light pl-status ">Status</th>
+				        <th class="font-weight-light">View report</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+					    <tr>
+					       <td>1</td>
+					       <td>09/02/2019</td>
+					       <td>Oni David</td>
+					       <td ><a href="" class="btn btn-sm btn-under-review">under review</a></td>
+					       <td><span class="btn-open-application border-cursor">Open Applications</span></td>
+					    </tr>
+					    <tr>
+					       <td>2</td>
+					       <td>09/02/2019</td>
+					       <td>Oni David</td>
+					       <td ><a href="" class="btn btn-sm btn-completed">Completed</a></td>
+					       <td><span class="border-cursor">Check Applications</span></td>
+					    </tr>
+					    <tr>
+					       <td>3</td>
+					       <td>09/02/2019</td>
+					       <td>Oni David</td>
+					       <td ><a href="" class="btn btn-sm btn-withdraw">Withdraw</a></td>
+					       <td ></td>
+					    </tr>
+					    <tr>
+					       <td>4</td>
+					       <td>09/02/2019</td>
+					       <td>Oni David</td>
+					       <td ><a href="" class="btn btn-sm btn-under-review">under review</a></td>
+					       <td><span class="btn-open-application border-cursor"> Open Applications</span></td>
+					    </tr>
+					    <tr>
+					       <td>5</td>
+					       <td>09/02/2019</td>
+					       <td>Oni David</td>
+					       <td ><a href="" class="btn btn-sm btn-under-review">under review</a></td>
+					       <td><span class="btn-open-application border-cursor"> Open Applications</span></td>
+					    </tr>
+				    </tbody>
+			  </table>
+			</div>
+		</div>	
+		<!-- Table ends -->
+
+
+	<!-- view profile in open starts -->
+    </div>      
+	<!-- main content ends	 -->
+</main>
+<!-- main body ends -->
+
+
+
+	<!-- profile modal starts -->
+	<!-- <div id="view-profile-modal" class="view-profile-popup" style="display: none">
+	    <div style="position: static;">
+	      	<div class="content-wrapper"> -->
+	      
+		        <!-- Modal Header -->
+		       <!--  <div class="modal-header border-bottom-0">
+		          <h6 class="modal-title reddish-color">Profile</h6>
+		          <a href="#" id="btn-close-profile-modal" class="reddish-color">Close</a>
+		        </div> -->
+	        
+		        <!-- Modal body -->
+		       <!--  <div class="modal-body" >
+		          	<div class="row justify-content-center">
+		          		<div class="col-12 text-center">
+		          			<img src="assets/images/john.png">
+		          			<h1 class="font-weight-bold reddish-color">John Doe</h1>
+		          			<h6 class="dark-yellow-color"><small> <span class="pr-2" style="border-right: 1px solid;">Onterio,Cananda</span> <span class="pl-2"> +1(234)5678-901</span> </small></h6>
+		          		</div>
+		          	</div>
+		          	<div class="row justify-content-center">
+		          		<div class="col-lg-10 col-12">
+		          			<p class="dark-yellow-color">
+		          				Lorem ipsum dolor amet sitLorem ipsum dolor amet sitLorem ipsum dolor amet sitLorem ipsum dolor amet sitLorem ipsum dolor amet sit
+		          				Lorem ipsum dolor amet sitLorem ipsum dolor amet sitLorem ipsum dolor amet sitLorem ipsum dolor amet sitLorem ipsum dolor amet sit
+		          				Lorem ipsum dolor amet sitLorem ipsum dolor amet sitLorem ipsum dolor amet sitLorem ipsum dolor amet sitLorem ipsum dolor amet sit
+		          			</p>
+		          		</div>
+		          	</div>
+					<div class="row justify-content-center mt-3 ">
+						<div class="col-xl-10 col-lg-10 col-12 pb-3" style="border-top: 1px solid rgb(244,18,76); border-bottom: 1px solid rgb(244,18,76); ">
+							<div class="row justify-content-center">
+								<div class="col-xl-8 col-6">
+									<h5 class="pt-4 "><span class="reddish-color">Date of Birth</span> </h5>
+									<h5 class="pt-4 "><span class="reddish-color">Gender</span></h5>
+									<h5 class="pt-4"><span class="reddish-color">Occupation</span> </h5>
+									<h5 class="pt-4 "><span class="reddish-color">Work Place</span> </h5>
+									<h5 class="pt-4 "><span class="reddish-color">Amount</span></h5>
+								</div>
+								<div class="col-xl-4 col-6">
+									<h5 class="pt-4 "><span class="justify-content-end dark-yellow-color">DD/MM/YYYY</span></h5>
+									<h5 class="pt-4 "> <span class="dark-yellow-color">Male</span></h5>
+									<h5 class="pt-4"><span class="dark-yellow-color">Banker</span></h5>
+									<h5 class="pt-4 "><span class="dark-yellow-color">Bank of Cananda</span></h5>
+									<h5 class="pt-4 "> <span class="dark-yellow-color">$52,000</span></h5>
+								</div>
+							</div>	
+						</div>
+
+						<div class="col-xl-10 col-lg-10 col-12 pb-5" >
+							<div class="row justify-content-center">
+								<div class="col-xl-8 col-8">
+									<h5 class="pt-4 "><span class="reddish-color">Work reference name</span> </h5>
+									<h5 class="pt-4 "><span class="reddish-color">work reference phone number</span></h5>
+								</div>
+								<div class="col-xl-4 col-4">
+									<h5 class="pt-4 "><span class="justify-content-end dark-yellow-color">-</span></h5>
+									<h5 class="pt-4 "> <span class="dark-yellow-color">-</span></h5>
+							</div>	
+						</div>
+					</div>
+
+		        </div>
+	        
+	        
+	      	</div>
+	     </div>
+  		</div>
+  	</div> -->
+  <!-- profile modal ends -->
+
+
+
+	<!-- popup open application starts -->
+	<section id="open-application" class=" col-xl-5 col-lg-7 col-md-10 mt-4 shadow pl-0 pr-0" style="display: none">
+		<div class="row" >	
+			<div class="col-12 pl-4 pr-4 pt-4 pb-4"  style="background-color: black;">
+				<h4 class="reddish-color font-respon ">Rent applications/Details
+				<span class="float-right"><a href="#" id="btn-close-app"  class="font-weight-light reddish-color" style="text-decoration: underline;"> <small><i class="fas fa-times mr-2"></i>close </small> </a></span>
+				 </h4>
+			</div>
+		</div>
+		<!-- WHite portion starts -->
+		<section class="pb-5">			
+			<div class="row mt-3">
+			<div class="col-sm-4 col-6 pl-4">
+				<h6 class="reddish-color">
+					<small> <span class="font-weight-bold">Name: </span> 
+						<span class="hard-brown">Oni,Babajide <span class="d-block ml-4 pl-3 ">Devid</span></span>
+					</small>
+				</h6>
+			</div>
+			<div class="col-sm-4 col-6 pl-4">
+				<h6 class="reddish-color">
+					<small><span class="font-weight-bold"> Current Address: </span>
+						<span class="hard-brown"> Ontario
+						</span>
+					</small> 
+				</h6>
+			</div>
+			<div class="col-sm-4 col-6 pl-4">
+				<h6 class="reddish-color">
+					<small><span class="font-weight-bold">Previous Address: </span>
+						<span class="hard-brown">Montreal
+						</span>
+					</small> 
+				</h6>
+			</div>
+			</div>
+
+			<div class="row mt-4">
+			<div class="col-12 pl-4">
+				<h6>
+					<small><span class="reddish-color" style="border-bottom: 1px solid;">View more</span>		
+					</small> 
+					<!-- id="btn-view-profile" -->
+					<a href="view-profile.html"  class="btn btn-sm text-white btn-view-profile ml-5 shadow" style="background-color:  rgb(244,18,76);">View Profile</a>
+				</h6>
+			</div>
+			</div>
+
+			<!-- Credit History -->
+			<div class="row mt-sm-5 mt-4">
+			<div  class="col-sm-6 col-12 pl-4 ">
+				<h6 class="reddish-color">
+					<small class=" font-weight-bold">
+						<span>Credit history</span>
+						<span class="d-block mt-2">
+							<span class="credit-history"><i class="fas fa-dollar-sign"></i></span>
+							<span class="ml-1">Credit Score: </span> <span class="hard-brown font-weight-light">300</span>
+						</span> 
+					</small>
+				</h6>
+			</div>
+			<div class="col-sm-6 col-12 pl-sm-5 pl-4 mt-sm-0 mt-4">
+				<h6 class="reddish-color pl-sm-5 ">
+					<small class="font-weight-bold">
+						<span>Rating</span>
+								<div class="progress mt-2">
+							  		<div class="progress-bar"></div>
+								</div>
+						<span class="font-weight-light">
+							Good fit
+						</span>
+					</small>
+				</h6>
+			</div>
+			</div>
+
+		 	<!-- reject/Accept buttons  starts -->
+			<div class="row mt-sm-5 pt-sm-5 pt-4" >
+				<div class="col-12 text-center">
+					<a href="" class="reddish-color reject-app">Reject Application</a>
+					<a href="" class="text-white ml-4 accept-app">Accept Application</a>	
+				</div>
+			</div>
+
+	 	<!-- reject/Accept buttons  ends -->
+		</section> 
+
+
+		
+	</section>	
+	<!-- popup open application ends -->
+
+
+
+
+
+
+
+
+
+  		<!-- footer starts -->
+	<footer id="footer" class="continer">
+	
+		<div class="row justify-content-center row-custom" >
+				<div class="col-4 ">
+					<h4 class="text-muted pb-2">RentEase</h4>
+					<span>
+	          			<h5>Lorem ipsum dolor amet sit</h5>
+	          			<h5>Lorem ipsum dolor amet sit</h5>
+          			</span>
+				</div>
+          		
+          		<div class="col-4 text-center">
+          			<h4 class="text-muted pb-2">Usefull Links</h4>
+          			<span>
+	          			<a href=""><h5>Vendors</h5></a>
+	          			<a href=""><h5>Contact Us</h5></a>
+	          			<a href=""><h5>FAQ</h5></a>
+	          			<a href=""><h5>About Us</h5></a>	
+          			</span>
+          		</div>
+ 				
+ 				<div class="col-4 text-right tumblr-icon-head-p">
+          			<h4 class="text-muted pb-2 respon-h4">We are social</h4>
+          			<span>
+	          			<h5>
+	          				<a href=""><i class="fab fa-facebook-f text-muted"></i></a>
+	          				<a href=""><i class="fab fa-tumblr text-muted tumblr-icon"></i></a>
+	          				<a href=""><i class="fab fa-linkedin-in text-muted "></i></a>		
+	          			</h5>
+          			</span>
+          		</div>       		
+		</div>
+		<div class="row">
+			<div class="col-12 mt-lg-0 mt-3">
+			<h6 class="text-muted"><i class="far fa-copyright"></i> RentEase 2018. All rights Reserved</h6>
+			</div>
+		</div>	
+			
+					
+	</footer>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script type="text/javascript" src="assets/bootstrap-4.3\js\bootstrap.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+<script src="assets/js/myScript.js"></script>
+ 
+
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
+<!-- <script src="assets/js/main.js"></script> -->
+
+
+</body>
+</html>

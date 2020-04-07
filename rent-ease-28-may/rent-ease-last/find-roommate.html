@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find-Roommate</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap-4.3/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+	
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/find-roommate-style.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+
+</head>
+<body>
+	<div style="overflow-x: hidden;">
+		
+
+
+<header>
+  <!-- navbar starts -->
+		<nav id="navbar-find-roommate" class="navbar navbar-expand-lg navbar-light fixed-top">
+		  <a class="navbar-brand" href="index.html"><img src="assets/images/logo-black1.png"></a>
+		  <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  	<li class="nav-item mx-auto"  id="seacrh-input">
+				<div class="form-group has-search">
+				    <span class="fa fa-search form-control-feedback dark-reddish"></span>
+				    <input type="text" class="form-control form-control" placeholder="Search Appartment..">
+				</div>
+			</li>
+			
+		    <ul id="custom-ul" class="navbar-nav ml-auto">
+		    
+			    <li class="nav-item" >
+			        <a class="nav-link nav-active" href="#">Find a roomate</a>
+			    </li>
+			    <li class="nav-item dropdown text-white">
+		        <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Vendor<i class="fas fa-angle-down ml-2"></i>
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	              <a class="dropdown-item mb-xl-2" href="moving-service.html">Moving Services</a>
+	              <a class="dropdown-item" href="cleaning-service.html">Cleaning Services</a>
+	            </div>
+		      </li>
+			     <li class="nav-item">
+			        <a class="nav-link " href="#" id="btn-login"><i class="fas fa-user-circle mr-1"></i> Login</a>
+			    </li>
+			    <li class="nav-item">
+			        <a class="nav-link btn btn-sm btn-signup-roommate" href="#" id="btn-sign-up">Signup</a>
+			    </li>
+		    </ul>
+		  </div>
+		</nav>
+		<!-- navbar ends -->
+
+
+		<!-- logins hidden phase starts -->
+<div class="header-overlay2">
+
+			<!-- signup -->
+        <div  id="sign-up" class="logins-container float-right">
+        	<div class="row justify-content-center header-mt">
+				<span class="text-white">Sign up to apply for rent in one click!</span>
+        	</div>
+        	<a href="#" id="btn-signup-email" style="text-decoration: none;"> 
+        		<div class="row justify-content-center bg-white mt-3 pb-1 pt-1">
+        		  <h6 class="dark-yellow-color">  Sign up with Email </h6>
+        		</div>
+       		 </a>
+       		 <a href="https://accounts.google.com/ServiceLogin/signinchooser?flowName=GlifWebSignIn&flowEntry=ServiceLogin" style="text-decoration: none;"> 
+        		<div class="row justify-content-center bg-white mt-5 pt-1 pb-1">
+        		 <h6 class="dark-yellow-color">  Sign up with Google </h6>
+        		</div>
+       		 </a>
+       		 <a href="https://www.facebook.com/" style="text-decoration: none;"> 
+        		<div class="row justify-content-center bg-white mt-5 pt-1 pb-1 login-body-mb">
+        		 <h6 class="dark-yellow-color">  Sign up with Facebook </h6>
+        		</div>
+       		 </a>
+
+       		 <div class="row">
+       		 	<img src="assets/images/logo-white.png">
+       		 </div>
+        </div>	
+
+
+		        <!-- Login -->
+        <div  id="login" class="float-right logins-container">
+        	<form>
+	        	<div class="row justify-content-center header-mt">
+					<span class="text-white">Login to apply for rent in one click!</span>
+	        	</div>
+	        	<a href="#" style="text-decoration: none;" id="btn-login-email"> 
+	        		<div class="row justify-content-center bg-white mt-3 pt-1 pb-1">
+	        		  <h6 class="dark-yellow-color">  Login with Email </h6>
+	        		</div>
+	       		 </a>
+	       		 <a href="https://accounts.google.com/ServiceLogin/signinchooser?flowName=GlifWebSignIn&flowEntry=ServiceLogin" style="text-decoration: none;"> 
+	        		<div class="row justify-content-center bg-white mt-5 pt-1 pb-1">
+					<h6 class="dark-yellow-color">  Login with Google </h6>
+	        		</div>
+	       		 </a>
+	       		 <a href="https://www.facebook.com/" style="text-decoration: none;"> 
+	        		<div class="row justify-content-center bg-white mt-5 pt-1 pb-1">
+	        		<h6 class="dark-yellow-color">  Login with Facebook </h6>
+	        		</div>
+	       		 </a>
+
+	       		 <div class="row justify-content-center mt-3 mb-5">
+	       		 	<h6 class="font-weight-bold "><a href="#" id="newUser1" class="text-white" style="text-decoration: underline;">New User?</a> </h6>
+	       		 </div>
+	       		 <div class="row">
+	       		 	<img src="assets/images/logo-white.png">
+	       		 </div>
+       		 </form>
+        </div>
+
+
+
+        <!-- signup with email	 -->
+        <div id="signup-email" class="float-right logins-container">
+        	<div class="row">
+       		 	<h6 id="btn-back-signup" class="text-white p-2" style="cursor: pointer;"><i class="fas fa-angle-left mr-2"></i><span style="text-decoration: underline;">Back</span> </h6>
+       		 </div>
+        	<form>
+							<header class="form-row">
+								<div class="col form-group text-center">
+									<span class="font-weight-bold text-white">Sign up with Email</span>
+								</div>
+							</header>
+
+
+							<div class="form-row mt-4">
+								<div class="col form-group">  
+								  	<input type="text" class="form-control" placeholder="First name">
+								</div> <!-- form-group end.// -->
+								<div class="col form-group">
+								  	<input type="text" class="form-control" placeholder="Last name ">
+								</div> <!-- form-group end.// -->
+							</div> <!-- form-row end.// -->
+							<div class="form-row mt-2">
+								<div class="col form-group">   
+								  	<input type="text" class="form-control" placeholder="Enter username">
+								</div> <!-- form-group end.// -->
+							</div> <!-- form-group end.// -->
+							
+							<div class="form-row mt-2">
+								<div class="col form-group">   
+								  	<input type="password" class="form-control" placeholder="Enter Password">
+								</div> <!-- form-group end.// -->
+								<div class="col form-group">
+								  	<input type="Password" class="form-control" placeholder="Repeat Password">
+								</div> <!-- form-group end.// -->
+							</div> <!-- form-row end.// -->
+
+							<div class="form-row mt-2">
+								<div class="col form-group">   
+								  	<input type="email" class="form-control" placeholder="Enter email">
+								</div> <!-- form-group end.// -->
+							</div> <!-- form-group end.// -->
+							<div class="form-row mt-2">
+								<div class="col form-group">   
+								  	<input type="text" class="form-control" placeholder="Repeat email">
+								</div> <!-- form-group end.// -->
+							</div> <!-- form-group end.// -->
+						    <div class="form-row mt-2 mb-3">
+						    	<div class="col form-group ml-3">   
+								  	<a href="resident-home.html" type="submit" class="btn btn-sm font-weight-bold p-2" style="background-color: rgb(249,223,116);"> Resident signup </a>
+								</div> <!-- form-group end.// -->
+								<div class="col form-group">   
+								  	<a href="landlord-dashboard.html" type="submit" class="btn btn-sm font-weight-bold p-2" style="background-color: rgb(249,223,116);"> Landlord signup </a>
+								</div> <!-- form-group end.// -->  
+						    </div> <!-- form-group// -->                                           
+						</form>
+        </div>
+
+<!-- Login with email starts -->
+	
+			 <div id="login-email" class=" logins-container float-right">
+        	<div class="row">
+       		 	<h6 id="btn-back-login" class="text-white p-2" style="cursor: pointer;"><i class="fas fa-angle-left mr-2"></i><span style="text-decoration: underline;">Back</span> </h6>
+       		 </div>
+        	<form>
+							<div class="form-row mt-4">
+								<div class="col form-group">   
+								  	<input type="text" class="form-control" placeholder="Enter username" style="border-radius: 20px;     height: calc(1.7em + .75rem + 2px);">
+								</div> <!-- form-group end.// -->
+							</div> <!-- form-group end.// -->
+							
+							<div class="form-row mt-5 mb-4">
+								<div class="col form-group">   
+								  	<input type="password" class="form-control" placeholder="Enter Password" style="border-radius: 20px;     height: calc(1.7em + .75rem + 2px);">
+								</div> <!-- form-group end.// -->
+							</div> <!-- form-row end.// -->
+							
+						    <div class="form-row mt-2 mb-3">
+						    	<div class="col form-group ml-3">   
+								  	<a href="resident-home.html" type="submit" class="btn btn-sm font-weight-bold p-2" style="background-color: rgb(249,223,116);"> Resident login </a>
+								</div> <!-- form-group end.// -->
+								<div class="col form-group">   
+								  	<a href="landlord-dashboard.html" type="submit" class="btn btn-sm font-weight-bold p-2" style="background-color: rgb(249,223,116);"> Landlord login </a>
+								</div> <!-- form-group end.// -->    
+						    </div> <!-- form-group// -->  
+						    <div class="row justify-content-center">
+						    	<div class="col-12 text-center">
+						    		<h6 class="text-white">forget password?</h6>
+						    	</div>
+						    </div> 
+						    <div class="row justify-content-center mt-3 mb-3">
+				       		 	<h6 class="font-weight-bold "><a href="#" id="newUser2" class="text-white" style="text-decoration: underline;">New User?</a> </h6>
+				       		</div>
+				       		<div class="row justify-content-center mb-4">
+				       			<div class="col-12 text-center">
+				       				<img src="assets/images/captcha.png">
+				       			</div>
+				       		</div>   
+				       		<div class="row">
+				       		 	<img src="assets/images/logo-white.png">
+				       		 </div>                                     
+						</form>
+        </div>
+
+		<!-- Login with email ends -->
+</div>
+<!-- logins hidden phase ends -->
+
+
+</header>		
+
+	    <main id="main-mate" class="container-fluid mt-5 mb-5 pl-0 pr-0 nav-top-margin">
+	    	<!-- welcome finder starts -->
+	    	<span id="hide-data" class="collapse show welecome-row">
+	    	<div class="row justify-content-center" >
+	    		<div class=" col-12 text-center">
+	    			<h1 class="font-weight-bold dark-reddish">
+					Welcome to Roommate finder
+					</h1>
+	    		</div>
+	    	</div>
+	    	<div class="row justify-content-center mt-2">
+	    		<div class="col-lg-10 col-md-11 col-12 text-center">
+	    			<h5 class="dark-yellow-color">
+	    				Some descriptions,Some descriptions,Some descriptions,Some descriptions,Some descriptions,Some descriptions,
+	    				Some descriptions,Some descriptions,Some descriptions,Some descriptions,Some descriptions,Some descriptions,
+	    			</h5>
+	    		</div>
+	    	</div>
+	    	</span>
+	    	<!-- Welcome finder ends -->
+	    	<!-- go to form button -->
+	    	<div class="row justify-content-center mt-4">
+	    		<div class="col-12 text-center">
+	    			<button id="goto-form" class="btn btn-sm text-white shadow btn-go-form">Go to form</button>
+	    		</div>
+	    	</div>
+	    	<!-- go to form button ends -->
+
+	    	<!-- community section starts -->
+	    	
+	    	<section class="roommate d-flex">
+				<div class="fade-layer">
+					<div class="row justify-content-center h-100" >
+							<div class="col-sm-3 col-3 my-auto">
+								<span class="text-center">
+									<i class="fas fa-users fa-4x mx-auto d-block"></i>
+									<h6 class="mt-3">Over 0+ Users</h6>
+								</span>
+							</div>
+							<div class="col-sm-3 col-3 my-auto">
+								<span class="text-center">
+									<i class="fas fa-user-plus fa-4x mx-auto d-block"></i>
+									<h6 class="mt-3">Over 0+ Monthly<span class="d-block">Signups</span></h6>
+								</span>
+							</div>
+							<div class="col-sm-3 col-3 my-auto">
+								<span class="text-center">
+									<i class="fas fa-hands-helping fa-4x mx-auto d-block"></i>
+									<h6 class="mt-3">Over 0+ Landlord Tenant<span class="d-block">Agreements</span></h6>
+								</span>
+							</div>
+							<div class="col-sm-3 col-3 my-auto">
+								<span class="text-center">
+									<i class="fab fa-creative-commons-zero fa-4x mx-auto d-block"></i>
+									<h6 class="mt-3">Zero Bots</h6>
+								</span>
+							</div>
+					</div>	
+				</div>
+			</section>
+	    	<!-- community sections ends -->
+
+        <section id="steps">
+
+	    	<!-- steps starts -->
+	    	<div  class="row justify-content-center">
+	    		<div class="col-md-5 col-sm-7 my-auto">
+	    			<h1 class="font-weight-bold dark-reddish">Step 1</h1>
+	    			<p class="dark-yellow-color">
+	    				Some descriptions,Some descriptions,Some descriptions,Some descriptions,Some descriptions,Some descriptions,
+	    			   	Some descriptions,Some descriptions,Some descriptions,Some descriptions,Some descriptions,Some descriptions
+	    			</p>
+	    		</div>
+	    		<div class="col-md-5 col-sm-5">
+	    			<img src="assets/images/some-image.png">
+	    		</div>
+	    	</div>
+	    	<!-- second step starts -->
+	    	<div class="row justify-content-center mt-3">
+	    		<div class="col-md-5 col-sm-5">
+	    			<img src="assets/images/some-image.png">
+	    		</div>
+	    		<div class="col-md-5 col-sm-7 my-auto">
+		    				<h1 class="font-weight-bold dark-reddish" align="right"><span > Step 2 </span></h1>
+		    				<p class="dark-yellow-color" align="right">
+		    				
+			    				Some descriptions,Some descriptions,Some descriptions,Some descriptions,Some descriptions,Some descriptions,
+			    			   	Some descriptions,Some descriptions,Some descriptions,Some descriptions,Some descriptions,Some descriptions
+			    			   
+			    			</p>
+	    		</div>
+	    	</div>
+	    	<!-- third step starts -->
+	    	<div class="row justify-content-center mt-3">
+	    		<div class="col-md-5 col-sm-7 my-auto">
+	    			<h1 class="font-weight-bold dark-reddish">Step 3</h1>
+	    			<p class="dark-yellow-color">
+	    				Some descriptions,Some descriptions,Some descriptions,Some descriptions,Some descriptions,Some descriptions,
+	    			   	Some descriptions,Some descriptions,Some descriptions,Some descriptions,Some descriptions,Some descriptions
+	    			</p>
+	    		</div>
+	    		<div class="col-md-5 col-sm-5">
+	    			<img src="assets/images/some-image.png">
+	    		</div>
+	    	</div>
+	    	</section>
+	    	<!-- steps ends -->
+
+	    </main>
+
+	<div style="position: relative;"> 
+	   		<!-- find roommae form starts -->
+		<section style="width:100%" id="find-form-container" class="row justify-content-center">
+				<div class="col-lg-8 col-md-10">
+					 <div class="row">
+					 		<h1 class="dark-yellow-color font-weight-bold float-left">Find a roommate form </h1>
+					 		<h6 class=" ml-auto"><a href="#" id="close-form" class="text-white" style="text-decoration: underline;display: none">close</a></h6>
+					 </div>
+					 
+					<form id="find-form" class="mt-5" action="">
+					 	<!-- first input row starts -->
+						<div class="row mb-3">
+							<div class="input-group mb-3 custom-place  col-md-5 pl-md-0">
+							    <div class="input-group-prepend">
+							      <span class="input-group-text">Budget</span>
+							    </div>
+							    	<input type="text" class="form-control" placeholder="$">
+							</div>
+							<div class="input-group mb-3 offset-md-2 col-md-5 pr-md-0">
+							    <div class="input-group-prepend">
+							      <span class="input-group-text">Location</span>
+							    </div>
+								  <select class="form-control" id="exampleFormControlSelect1">
+							      <option>Select</option>
+							      <option>2</option>
+							      <option>3</option>
+							      <option>4</option>
+							      <option>5</option>
+						    	  </select>
+							</div> 
+						</div>
+						<!-- Second input row starts -->
+						<div class="row mb-4">
+							<div class="input-group mb-3  col-md-5 pl-md-0">
+							    <div class="input-group-prepend">
+							      <span class="input-group-text">Gender</span>
+							    </div>
+							    <select class="form-control" id="exampleFormControlSelect1">
+							      <option>Select</option>
+							      <option>2</option>
+							      <option>3</option>
+							      <option>4</option>
+							      <option>5</option>
+						    	  </select>
+							</div>
+							<div class="input-group mb-3 offset-md-2 col-md-5 pr-md-0">
+							    <div class="input-group-prepend" >
+							      <span class="input-group-text">Occupation</span>
+							    </div>
+								  <select class="form-control" id="exampleFormControlSelect1">
+							      <option>Select</option>
+							      <option>2</option>
+							      <option>3</option>
+							      <option>4</option>
+							      <option>5</option>
+						    	  </select>
+							</div> 
+						</div>
+							<!-- third input row starts -->
+						<div class="row mb-4">
+							<div class="input-group  mb-3  col-md-5 pl-md-0">
+							    <div class="input-group-prepend">
+							      <span class="input-group-text">Move in Date</span>
+							    </div>
+							    <select class="form-control" id="exampleFormControlSelect1">
+							      <option>Select</option>
+							      <option>2</option>
+							      <option>3</option>
+							      <option>4</option>
+							      <option>5</option>
+						    	  </select>
+							</div>
+							<div class="input-group mb-3 offset-md-2 col-md-5 pr-md-0">
+							    <div class="input-group-prepend">
+							      <span class="input-group-text">Expected legnth of stay</span>
+							    </div>
+								  <select class="form-control" id="exampleFormControlSelect1">
+							      <option>Select</option>
+							      <option>2</option>
+							      <option>3</option>
+							      <option>4</option>
+							      <option>5</option>
+						    	  </select>
+							</div> 
+						</div>
+						<!-- fourth input row starts -->
+						<div class="row mb-4">
+							<div class="form-group col-lg-5 col-md-6 custom-place pl-md-0"">
+							  <textarea class="form-control" rows="5" id="comment" placeholder="about me"></textarea>
+							</div>
+					 	</div>
+					     
+					     <!-- fifth row starts -->
+						<div class="row">
+							<div class="col-lg-5 col-md-7 pl-md-0">
+								<a href="roommate-list.html" class="btn btn-sm btn-search">Search</a>
+								<button class="btn btn-lg"> 
+								<a href="#" id="btn-submit" class="float-right yellowish-color" style="text-decoration: underline;">Submit form</a>
+							</button>
+							</div>
+						</div>
+					</form>
+				</div>
+		</section>
+			<!-- find roommate form ends -->
+
+
+			<!-- submit form icon -->
+			<section id="submit-form" class="row justify-content-center align-items-end shadow submit-form-roommate" style="display: none">
+				<div class="col-12 text-center">
+					<i class="far fa-check-circle fa-7x mb-5"></i>
+				</div>
+			</section>
+	</div>
+
+
+
+		<!-- footer starts -->
+	<footer id="footer" class="continer">
+	
+		<div class="row justify-content-center row-custom" >
+				<div class="col-4 ">
+					<h4 class="text-muted pb-2">RentEase</h4>
+					<span>
+	          			<h5>Lorem ipsum dolor amet sit</h5>
+	          			<h5>Lorem ipsum dolor amet sit</h5>
+          			</span>
+				</div>
+          		
+          		<div class="col-4 text-center">
+          			<h4 class="text-muted pb-2">Usefull Links</h4>
+          			<span>
+	          			<a href=""><h5>Vendors</h5></a>
+	          			<a href=""><h5>Contact Us</h5></a>
+	          			<a href=""><h5>FAQ</h5></a>
+	          			<a href=""><h5>About Us</h5></a>	
+          			</span>
+          		</div>
+ 				
+ 				<div class="col-4 text-right tumblr-icon-head-p">
+          			<h4 class="text-muted pb-2">We are social</h4>
+          			<span>
+	          			<h5>
+	          				<a href=""><i class="fab fa-facebook-f text-muted"></i></a>
+	          				<a href=""><i class="fab fa-tumblr text-muted tumblr-icon"></i></a>
+	          				<a href=""><i class="fab fa-linkedin-in text-muted "></i></a>		
+	          			</h5>
+          			</span>
+          		</div>       		
+		</div>
+		<div class="row">
+			<div class="col-12 mt-lg-2 mt-md-4 mt-sm-5 mt-3">
+			<h6 class="text-muted"><i class="far fa-copyright"></i> RentEase 2018. All rights Reserved</h6>
+			</div>
+		</div>	
+			
+					
+	</footer>
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script type="text/javascript" src="assets/bootstrap-4.3\js\bootstrap.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+<script type="text/javascript" src="assets/js/myScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Roommate-list</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/roommate-list-style.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/chat-style.css">
+
+</head>
+<body>
+
+
+<header>
+  <!-- navbar starts -->
+		<nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
+		  <a class="navbar-brand" href="index.html"><img src="assets/images/logo-black1.png"></a>
+		  <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  	<li class="nav-item mx-auto" id="seacrh-input" >
+				<div class="form-group has-search" >
+				    <span class="fa fa-search form-control-feedback"></span>
+				    <input type="text" class="form-control form-control" placeholder="Search Appartment.." ">
+				</div>
+			</li>
+			
+		    <ul id="custom-ul" class="navbar-nav ml-auto">
+		    
+			    <li class="nav-item" >
+			        <a class="nav-link" href="find-roommate.html">Find a roomate</a>
+			    </li>
+			    <li class="nav-item dropdown text-white">
+		        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Vendor<i class="fas fa-angle-down ml-2"></i>
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="">
+		          <a class="dropdown-item mb-2 mt-0 " href="moving-service.html">Moving Services</a>
+		          <a class="dropdown-item mt-0" href="cleaning-service.html">Cleaning Service</a>
+		        </div>
+		      </li>
+		      <li class="nav-item">
+			        <a class="nav-link " href="#" id="btn-login"><i class="fas fa-user-circle mr-1"></i> Login</a>
+			    </li>
+			     <li class="nav-item">
+			        <a class="nav-link btn btn-sm btn-signup" href="#" id="btn-sign-up">Signup</a>
+			    </li>
+		    </ul>
+		  </div>
+		</nav>
+		<!-- navbar ends -->
+
+		<section id="appartment-search" class="row justify-content-center shadow nav-top-margin" style="padding: 1em 1em .5em 1em;">
+			
+
+		<div  class="form-group col-xl-2 col-lg-3 col-sm-4 col-6">
+		  <select class="form-control" id="sel1">
+		    <option>Location</option>
+		    <option>2</option>
+		    <option>3</option>
+		    <option>4</option>
+		  </select>
+		</div>
+		<div class="form-group col-xl-2 col-lg-3 col-sm-4 col-6">
+		  <select class="form-control" id="sel1">
+		    <option>Appartment Type</option>
+		    <option>2</option>
+		    <option>3</option>
+		    <option>4</option>
+		  </select>
+		</div>
+		<div class="col-lg-3 col-md-2 col-sm-3 col-6 text-right pt-2">
+
+			<span><i class="fas fa-filter yellowish-color mr-1"></i></span>
+			<span class="reddish-color mr-1"> Filter 
+			<i class="fas fa-chevron-down"></i></span>
+		</div>
+		<div class="col-lg-3 col-md-2 col-sm-1 col-6 text-right pt-2 padding-respon-0">
+			<a href="#" id="btn-tab-view" ><img src="assets/images/btn-tab.png"></a>
+			<a href="#" id="btn-list-view"><img src="assets/images/btn-list.png"></a>
+		</div>
+		</section>
+		
+		<!-- logins hidden phase starts -->
+<div class="header-overlay2">
+
+			<!-- signup -->
+        <div  id="sign-up" class="logins-container float-right">
+        	<div class="row justify-content-center header-mt">
+				<span class="text-white">Sign up to apply for rent in one click!</span>
+        	</div>
+        	<a href="#" id="btn-signup-email" style="text-decoration: none;"> 
+        		<div class="row justify-content-center bg-white mt-3 pb-1 pt-1">
+        		  <h6 class="dark-yellow-color">  Sign up with Email </h6>
+        		</div>
+       		 </a>
+       		 <a href="https://accounts.google.com/ServiceLogin/signinchooser?flowName=GlifWebSignIn&flowEntry=ServiceLogin" style="text-decoration: none;"> 
+        		<div class="row justify-content-center bg-white mt-5 pt-1 pb-1">
+        		 <h6 class="dark-yellow-color">  Sign up with Google </h6>
+        		</div>
+       		 </a>
+       		 <a href="https://www.facebook.com/" style="text-decoration: none;"> 
+        		<div class="row justify-content-center bg-white mt-5 pt-1 pb-1 login-body-mb">
+        		 <h6 class="dark-yellow-color">  Sign up with Facebook </h6>
+        		</div>
+       		 </a>
+
+       		 <div class="row">
+       		 	<img src="assets/images/logo-white.png">
+       		 </div>
+        </div>	
+
+
+		        <!-- Login -->
+        <div  id="login" class="float-right logins-container">
+        	<form>
+	        	<div class="row justify-content-center header-mt">
+					<span class="text-white">Login to apply for rent in one click!</span>
+	        	</div>
+	        	<a href="#" style="text-decoration: none;" id="btn-login-email"> 
+	        		<div class="row justify-content-center bg-white mt-3 pt-1 pb-1">
+	        		  <h6 class="dark-yellow-color">  Login with Email </h6>
+	        		</div>
+	       		 </a>
+	       		 <a href="https://accounts.google.com/ServiceLogin/signinchooser?flowName=GlifWebSignIn&flowEntry=ServiceLogin" style="text-decoration: none;"> 
+	        		<div class="row justify-content-center bg-white mt-5 pt-1 pb-1">
+					<h6 class="dark-yellow-color">  Login with Google </h6>
+	        		</div>
+	       		 </a>
+	       		 <a href="https://www.facebook.com/" style="text-decoration: none;"> 
+	        		<div class="row justify-content-center bg-white mt-5 pt-1 pb-1">
+	        		<h6 class="dark-yellow-color">  Login with Facebook </h6>
+	        		</div>
+	       		 </a>
+
+	       		 <div class="row justify-content-center mt-3 mb-5">
+	       		 	<h6 class="font-weight-bold "><a href="#" id="newUser1" class="text-white" style="text-decoration: underline;">New User?</a> </h6>
+	       		 </div>
+	       		 <div class="row">
+	       		 	<img src="assets/images/logo-white.png">
+	       		 </div>
+       		 </form>
+        </div>
+
+
+
+        <!-- signup with email	 -->
+        <div id="signup-email" class="float-right logins-container">
+        	<div class="row">
+       		 	<h6 id="btn-back-signup" class="text-white p-2" style="cursor: pointer;"><i class="fas fa-angle-left mr-2"></i><span style="text-decoration: underline;">Back</span> </h6>
+       		 </div>
+        	<form>
+							<header class="form-row">
+								<div class="col form-group text-center">
+									<span class="font-weight-bold text-white">Sign up with Email</span>
+								</div>
+							</header>
+
+
+							<div class="form-row mt-4">
+								<div class="col form-group">  
+								  	<input type="text" class="form-control" placeholder="First name">
+								</div> <!-- form-group end.// -->
+								<div class="col form-group">
+								  	<input type="text" class="form-control" placeholder="Last name ">
+								</div> <!-- form-group end.// -->
+							</div> <!-- form-row end.// -->
+							<div class="form-row mt-2">
+								<div class="col form-group">   
+								  	<input type="text" class="form-control" placeholder="Enter username">
+								</div> <!-- form-group end.// -->
+							</div> <!-- form-group end.// -->
+							
+							<div class="form-row mt-2">
+								<div class="col form-group">   
+								  	<input type="password" class="form-control" placeholder="Enter Password">
+								</div> <!-- form-group end.// -->
+								<div class="col form-group">
+								  	<input type="Password" class="form-control" placeholder="Repeat Password">
+								</div> <!-- form-group end.// -->
+							</div> <!-- form-row end.// -->
+
+							<div class="form-row mt-2">
+								<div class="col form-group">   
+								  	<input type="email" class="form-control" placeholder="Enter email">
+								</div> <!-- form-group end.// -->
+							</div> <!-- form-group end.// -->
+							<div class="form-row mt-2">
+								<div class="col form-group">   
+								  	<input type="text" class="form-control" placeholder="Repeat email">
+								</div> <!-- form-group end.// -->
+							</div> <!-- form-group end.// -->
+						    <div class="form-row mt-2 mb-3">
+						    	<div class="col form-group ml-3">   
+								  	<a href="resident-home.html" type="submit" class="btn btn-sm font-weight-bold p-2" style="background-color: rgb(249,223,116);"> Resident signup </a>
+								</div> <!-- form-group end.// -->
+								<div class="col form-group">   
+								  	<a href="landlord-dashboard.html" type="submit" class="btn btn-sm font-weight-bold p-2" style="background-color: rgb(249,223,116);"> Landlord signup </a>
+								</div> <!-- form-group end.// -->    
+						    </div> <!-- form-group// -->                                           
+						</form>
+        </div>
+
+<!-- Login with email starts -->
+	
+			 <div id="login-email" class=" logins-container float-right">
+        	<div class="row">
+       		 	<h6 id="btn-back-login" class="text-white p-2" style="cursor: pointer;"><i class="fas fa-angle-left mr-2"></i><span style="text-decoration: underline;">Back</span> </h6>
+       		 </div>
+        	<form>
+							<div class="form-row mt-4">
+								<div class="col form-group">   
+								  	<input type="text" class="form-control" placeholder="Enter username" style="border-radius: 20px;     height: calc(1.7em + .75rem + 2px);">
+								</div> <!-- form-group end.// -->
+							</div> <!-- form-group end.// -->
+							
+							<div class="form-row mt-5 mb-4">
+								<div class="col form-group">   
+								  	<input type="password" class="form-control" placeholder="Enter Password" style="border-radius: 20px;     height: calc(1.7em + .75rem + 2px);">
+								</div> <!-- form-group end.// -->
+							</div> <!-- form-row end.// -->
+							
+						    <div class="form-row mt-2 mb-3">
+						    	<div class="col form-group ml-3">   
+								  	<a href="resident-home.html" type="submit" class="btn btn-sm font-weight-bold p-2" style="background-color: rgb(249,223,116);"> Resident login </a>
+								</div> <!-- form-group end.// -->
+								<div class="col form-group">   
+								  	<a href="landlord-dashboard.html" type="submit" class="btn btn-sm font-weight-bold p-2" style="background-color: rgb(249,223,116);"> Landlord login </a>
+								</div> <!-- form-group end.// -->    
+						    </div> <!-- form-group// -->  
+						    <div class="row justify-content-center">
+						    	<div class="col-12 text-center">
+						    		<h6 class="text-white">forget password?</h6>
+						    	</div>
+						    </div> 
+						    <div class="row justify-content-center mt-3 mb-3">
+				       		 	<h6 class="font-weight-bold "><a href="#" id="newUser2" class="text-white" style="text-decoration: underline;">New User?</a> </h6>
+				       		</div>
+				       		<div class="row justify-content-center mb-4">
+				       			<div class="col-12 text-center">
+				       				<img src="assets/images/captcha.png">
+				       			</div>
+				       		</div>   
+				       		<div class="row">
+				       		 	<img src="assets/images/logo-white.png">
+				       		 </div>                                     
+						</form>
+        </div>
+
+		<!-- Login with email ends -->
+</div>
+<!-- logins hidden phase ends -->
+
+
+
+</header>
+<!-- Header ends -->
+
+<!-- main boddy starts -->
+
+	<main  id="main" class="container-fluid ">
+		<div id="tab-view">
+		 	<!-- first main roommate row starts -->
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<div class="row justify-content-center">
+						
+							<!-- first roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image">
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="view-profile.html" style="">View Profile</a>
+								<span class="float-right">
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+							<!-- first roommate ends -->
+
+							<!-- Second roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11 mt-md-0 mt-5">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image">
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a>
+								<span class="float-right">
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+						<!-- second roommate ends -->
+
+						<!-- third roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11 mt-md-0 mt-5">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image">
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="#" href="view-profile.html">View Profile</a>
+								<span class="float-right">
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+						<!-- third roommate ends -->
+
+					</div>
+				</div>
+			</div>
+			<!-- first main appartment row endss -->
+
+			<!-- Second main roommate row starts -->
+			<div class="row justify-content-center mt-5">
+				<div class="col-12">
+					<div class="row justify-content-center">
+						
+							<!-- first roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image">
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a>
+								<span class="float-right">
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+							<!-- first roommate ends -->
+
+							<!-- Second roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11 mt-md-0 mt-5">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image">
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a>
+								<span class="float-right">
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+						<!-- second roommate ends -->
+
+						<!-- third roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11 mt-md-0 mt-5">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image">
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a>
+								<span class="float-right">
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+						<!-- third roommate ends -->
+
+					</div>
+				</div>
+			</div>
+			<!-- second main roommate row endss -->
+
+			<!-- third main appartment row starts -->
+			<div class="row justify-content-center mt-5">
+				<div class="col-12">
+					<div class="row justify-content-center">
+						
+							<!-- first roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image">
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a>
+								<span class="float-right">
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+							<!-- first roommate ends -->
+
+							<!-- Second roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11 mt-md-0 mt-5">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image">
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a>
+								<span class="float-right">
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+						<!-- second roommate ends -->
+
+						<!-- third roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11 mt-md-0 mt-5">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image">
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a>
+								<span class="float-right">
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+						<!-- third roommate ends -->
+
+					</div>
+				</div>
+			</div>
+			<!-- third main appartment row endss -->
+
+			<!-- fourth main appartment row starts -->
+			<div class="row justify-content-center mt-5">
+				<div class="col-12">
+					<div class="row justify-content-center">
+						
+							<!-- first roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image" >
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a>
+								<span class="float-right">
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+							<!-- first roommate ends -->
+
+							<!-- Second roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11 mt-md-0 mt-5">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image">
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a>
+								<span class="float-right">
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+						<!-- second roommate ends -->
+
+						<!-- third roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11 mt-md-0 mt-5">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image">
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a>
+								<span class="float-right">
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+						<!-- third roommate ends -->
+
+					</div>
+				</div>
+			</div>
+			<!-- fourth main roommate row endss -->
+
+
+			<!-- hidden rows starts -->
+			<div id="more-roommate"  class="collapse">
+			
+			<!-- fifth main appartment row starts -->
+				<div class="row justify-content-center mt-5">
+				<div class="col-12">
+					<div class="row justify-content-center">
+						
+							<!-- first roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image">
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a>
+								<span class="float-right">
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+							<!-- first roommate ends -->
+
+							<!-- Second roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11 mt-md-0 mt-6">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image">
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a>
+								<span class="float-right">
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+						<!-- second roommate ends -->
+
+						<!-- third roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11 mt-md-0 mt-5">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image">
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a>
+								<span class="float-right">
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+						<!-- third roommate ends -->
+
+					</div>
+				</div>
+			</div>
+			<!-- fifth main appartment row endss -->
+
+			<!-- sixth main appartment row starts -->
+			<div class="row justify-content-center mt-5">
+				<div class="col-12">
+					<div class="row justify-content-center">
+						
+							<!-- first roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image">
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a>
+								<span class="float-right">
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+							<!-- first roommate ends -->
+
+							<!-- Second roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11 mt-md-0 mt-5">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image">
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a>
+								<span class="float-right">
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+						<!-- second roommate ends -->
+
+						<!-- third roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11 mt-md-0 mt-6">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image">
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a>
+								<span class="float-right">
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+						<!-- third roommate ends -->
+
+					</div>
+				</div>
+			</div>
+			<!-- sixth main appartment row endss -->
+
+			<!-- seventh main appartment row starts -->
+			<div class="row justify-content-center mt-5">
+				<div class="col-12">
+					<div class="row justify-content-center">
+						
+							<!-- first roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image">
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a>
+								<span class="float-right">
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+							<!-- first roommate ends -->
+
+							<!-- Second roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11 mt-md-0 mt-5">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image">
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a>
+								<span class="float-right">
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+						<!-- second roommate ends -->
+
+						<!-- third roommate starts -->
+						<div class="col-xl-3 col-md-4 col-sm-8 col-11 mt-md-0 mt-5">
+							<div class="card">
+								<div>
+									    <img class="card-img-top" src="assets/images/some-image.png" alt="Card image">
+								</div>
+							    <div class="card-body text-white">
+							    	<div>
+							    	<h6>John Doe</h6>	
+							    	<h6><small class="font-weight-light">Male,28 years old, Winnipeg</small></h6>
+							        <h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6>
+							        <p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p>
+							    </div>
+							    </div>
+							    <div class="card-footer">
+								<a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a>
+								<span class="float-right">
+									<img src="assets/images/heart-bg-icon.png">
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer;">
+									<img src="assets/images/tick-icon.png">
+
+								</span>
+								</div>
+						  	</div>
+						</div>
+						<!-- third roommate ends -->
+
+					</div>
+				</div>
+			</div>
+			<!-- seventh main appartment row endss -->
+			</div>
+			<!-- hidden rows ends -->
+
+			<div class="row justify-content-center show-more-wrapper">
+				<div class="col-xl-12 text-center">
+					<a href="" class="btn btn-sm bg-white shadow reddish-color font-weight-bold btn-show-more" data-toggle="collapse" data-target="#more-roommate"> Show more</a>
+				</div>
+			</div>
+
+		
+
+		</div>
+		<!-- Tab View Ends -->
+
+
+
+		<!-- List View Starts -->
+		<div id="list-view" class="container" style="display: none">
+			<table class="table table-hover text-center">
+  				<thead style="background: rgb(244,18,76);">
+    				<tr>
+      					<th scope="col">#</th>
+      					<th scope="col">Picture</th>
+      					<th class="pl-5 pr-5" scope="col">Name</th>
+      					<th scope="col">Personal</th>
+      					<th scope="col">Status</th>
+      					<th scope="col">Description</th>
+      					<th class="pl-5 pr-5" scope="col">Actions</th>
+      					<th scope="col">Profile</th>
+    				</tr>
+  				</thead>
+  				<tbody>
+    				<tr>
+      					<th scope="row">1</th>
+      					<td><img src="assets/images/some-image.png" alt="Roomate Image" style="height: 10rem;width: 10rem"></td>
+      					<td>John Doe</td>
+      					<td><small class="font-weight-light">Male,28 years old, Winnipeg</small></td>
+      					<td><h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6></td>
+      					<td><p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p></td>
+      					<td>
+      						<span>
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+							</span>
+						</td>
+						<td><a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a></td>
+    				</tr>
+    				<tr>
+      					<th scope="row">2</th>
+      					<td><img src="assets/images/some-image.png" alt="Roomate Image" style="height: 10rem;width: 10rem"></td>
+      					<td>John Doe</td>
+      					<td><small class="font-weight-light">Male,28 years old, Winnipeg</small></td>
+      					<td><h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6></td>
+      					<td><p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p></td>
+      					<td>
+      						<span>
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+							</span>
+						</td>
+						<td><a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a></td>
+    				</tr>
+    				<tr>
+      					<th scope="row">3</th>
+      					<td><img src="assets/images/some-image.png" alt="Roomate Image" style="height: 10rem;width: 10rem"></td>
+      					<td>John Doe</td>
+      					<td><small class="font-weight-light">Male,28 years old, Winnipeg</small></td>
+      					<td><h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6></td>
+      					<td><p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p></td>
+      					<td>
+      						<span>
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+							</span>
+						</td>
+						<td><a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a></td>
+    				</tr>
+    				<tr>
+      					<th scope="row">4</th>
+      					<td><img src="assets/images/some-image.png" alt="Roomate Image" style="height: 10rem;width: 10rem"></td>
+      					<td>John Doe</td>
+      					<td><small class="font-weight-light">Male,28 years old, Winnipeg</small></td>
+      					<td><h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6></td>
+      					<td><p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p></td>
+      					<td>
+      						<span>
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+							</span>
+						</td>
+						<td><a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a></td>
+    				</tr>
+    				<tr>
+      					<th scope="row">5</th>
+      					<td><img src="assets/images/some-image.png" alt="Roomate Image" style="height: 10rem;width: 10rem"></td>
+      					<td>John Doe</td>
+      					<td><small class="font-weight-light">Male,28 years old, Winnipeg</small></td>
+      					<td><h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6></td>
+      					<td><p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p></td>
+      					<td>
+      						<span>
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+							</span>
+						</td>
+						<td><a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a></td>
+    				</tr>
+    				<tr>
+      					<th scope="row">6</th>
+      					<td><img src="assets/images/some-image.png" alt="Roomate Image" style="height: 10rem;width: 10rem"></td>
+      					<td>John Doe</td>
+      					<td><small class="font-weight-light">Male,28 years old, Winnipeg</small></td>
+      					<td><h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6></td>
+      					<td><p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p></td>
+      					<td>
+      						<span>
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+							</span>
+						</td>
+						<td><a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a></td>
+    				</tr>
+    				<tr>
+      					<th scope="row">7</th>
+      					<td><img src="assets/images/some-image.png" alt="Roomate Image" style="height: 10rem;width: 10rem"></td>
+      					<td>John Doe</td>
+      					<td><small class="font-weight-light">Male,28 years old, Winnipeg</small></td>
+      					<td><h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6></td>
+      					<td><p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p></td>
+      					<td>
+      						<span>
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+							</span>
+						</td>
+						<td><a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a></td>
+    				</tr>
+    				<tr>
+      					<th scope="row">8</th>
+      					<td><img src="assets/images/some-image.png" alt="Roomate Image" style="height: 10rem;width: 10rem"></td>
+      					<td>John Doe</td>
+      					<td><small class="font-weight-light">Male,28 years old, Winnipeg</small></td>
+      					<td><h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6></td>
+      					<td><p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p></td>
+      					<td>
+      						<span>
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+							</span>
+						</td>
+						<td><a class="btn btn-sm btn-view-profile" href="#" href="view-profile.html">View Profile</a></td>
+    				</tr>
+    				<tr>
+      					<th scope="row">9</th>
+      					<td><img src="assets/images/some-image.png" alt="Roomate Image" style="height: 10rem;width: 10rem"></td>
+      					<td>John Doe</td>
+      					<td><small class="font-weight-light">Male,28 years old, Winnipeg</small></td>
+      					<td><h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6></td>
+      					<td><p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p></td>
+      					<td>
+      						<span>
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+							</span>
+						</td>
+						<td><a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a></td>
+    				</tr>
+    				<tr>
+      					<th scope="row">10</th>
+      					<td><img src="assets/images/some-image.png" alt="Roomate Image" style="height: 10rem;width: 10rem"></td>
+      					<td>John Doe</td>
+      					<td><small class="font-weight-light">Male,28 years old, Winnipeg</small></td>
+      					<td><h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6></td>
+      					<td><p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p></td>
+      					<td>
+      						<span>
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+							</span>
+						</td>
+						<td><a class="btn btn-sm btn-view-profile" href="#" href="view-profile.html">View Profile</a></td>
+    				</tr>
+    				<tr>
+      					<th scope="row">11</th>
+      					<td><img src="assets/images/some-image.png" alt="Roomate Image" style="height: 10rem;width: 10rem"></td>
+      					<td>John Doe</td>
+      					<td><small class="font-weight-light">Male,28 years old, Winnipeg</small></td>
+      					<td><h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6></td>
+      					<td><p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p></td>
+      					<td>
+      						<span>
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+							</span>
+						</td>
+						<td><a class="btn btn-sm btn-view-profile" href="view-profile.html">View Profile</a></td>
+    				</tr>
+    				<tr>
+      					<th scope="row">12</th>
+      					<td><img src="assets/images/some-image.png" alt="Roomate Image" style="height: 10rem;width: 10rem"></td>
+      					<td>John Doe</td>
+      					<td><small class="font-weight-light">Male,28 years old, Winnipeg</small></td>
+      					<td><h6 class="font-weight-light dark-yellow-color"><small> Looking in Montreal Winnipeg, Wakanda</small></h6></td>
+      					<td><p><small>I am a lorem Ipsum person and my work at lorem Ispum cart.I spend most of my time at Lorem Ipsum and I am looking for my Lorem Ipsum Roommate.</small></p></td>
+      					<td>
+      						<span>
+									<i class="far fa-heart" style="color: red; padding: .3rem .3rem .2rem .3rem; border-radius: 100%; background-color: white; font-size: .75rem; "></i>									
+									<img class="btn-chat-popup" src="assets/images/chat-box-icon.png" style="cursor: pointer; padding-bottom: .1rem;">
+									<img class="tick-icon" src="assets/images/tick-icon.png">
+
+							</span>
+						</td>
+						<td><a class="btn btn-sm btn-view-profile" href="#" href="view-profile.html">View Profile</a></td>
+    				</tr>
+  				</tbody>
+			</table>
+		</div>
+		<!-- List View Ends -->
+
+	</main>
+
+
+<!-- chat box starts -->
+<div id="chat-popup" class="clearfix shadow chat-wrapper" style="display: none;">
+    <div class="chat">
+      <div class="chat-header clearfix col-12">
+          <div class="chat-with col-6 d-inline">John Doe</div>
+        <img src="assets/images/profile-chat.png" alt="avatar" />
+      </div> <!-- end chat-header -->
+      
+      <div class="chat-history">
+        <ul>
+          <li class="clearfix">
+            <span class="message-data float-right">
+            	<img src="assets/images/userChat.png" alt="">              
+            </span>
+            <span class="message other-message float-right">
+              Hi Vincent, how are you? How is the project coming along?
+            </span>
+          </li>
+          
+          <li>
+            <span class="message-data">
+              <img src="assets/images/userChat.png" alt="">
+            </span>
+            <span class="message my-message">
+              Are we meeting today? Project has been already finished and I have results to show you.
+            </span>
+          </li>
+          
+          <li class="clearfix">
+            <span class="message-data float-right">
+              <img src="assets/images/userChat.png" alt="">              
+            </span>
+            <span class="message other-message float-right">
+              Well I am not sure. The rest of the team is not here yet. Maybe in an hour or so? Have you faced any problems at the last phase of the project?
+            </span>
+          </li>
+          
+          <li>
+            <span class="message-data">
+              <img src="assets/images/userChat.png" alt="">
+            </span>
+            <span class="message my-message">
+              Actually everything was fine. I'm very excited to show this to our team.
+            </span>
+          </li>
+          
+          <li>
+            <span class="message-data">
+              <img src="assets/images/userChat.png" alt="">
+            </span>
+            <i class="fa fa-circle online"></i>
+            <i class="fa fa-circle online" style="color: #AED2A6"></i>
+            <i class="fa fa-circle online" style="color:#DAE9DA"></i>
+          </li>
+          
+        </ul>
+        
+      </div> <!-- end chat-history -->
+      
+      <div class="chat-message clearfix">
+        <textarea name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="1"></textarea>
+      
+        <span  class="myButton" title="" ><img src="assets/images/btnSend.png" alt="Send"></span>
+
+      </div> <!-- end chat-message -->
+      <div class="logo-div p-1">
+      	<img src="assets/images/logo-brown.png">
+      </div> <!-- end chat logo -->
+      
+    </div> 
+ </div>
+<!-- chat box ends -->
+
+
+	<!-- profile popup modal starts -->
+	<div class="modal fade" id="view-profile">
+	    <div class="modal-dialog modal-lg">
+	      	<div class="modal-content" style="padding: 4em;">
+	      
+		        <!-- Modal Header -->
+		        <div class="modal-header border-bottom-0">
+		          <h6 class="modal-title reddish-color">John's Profile</h6>
+		          <a href="#" class="reddish-color close"  data-dismiss="modal" style="font-size: unset; opacity: unset;">close</a>
+		        </div>
+	        
+		        <!-- Modal body -->
+		        <div class="modal-body" >
+		          	<div class="row justify-content-center">
+		          		<div class="col-xl-12 text-center user-info">
+		          			<img src="assets/images/john.png">
+		          			<h1 class="font-weight-bold reddish-color">John Doe</h1>
+		          			<h6 class="dark-yellow-color"><small><span class="user-city">Onterio,Cananda</span> <span class="user-contact"> +1(234)5678-901</span> </small></h6>
+		          		</div>
+		          	</div>
+		          	<div class="row justify-content-center">
+		          		<div class="col-xl-12 col-lg-12">
+		          			<p class="dark-yellow-color">
+		          				Lorem ipsum dolor amet sitLorem ipsum dolor amet sitLorem ipsum dolor amet sitLorem ipsum dolor amet sitLorem ipsum dolor amet sit
+		          				Lorem ipsum dolor amet sitLorem ipsum dolor amet sitLorem ipsum dolor amet sitLorem ipsum dolor amet sitLorem ipsum dolor amet sit
+		          				Lorem ipsum dolor amet sitLorem ipsum dolor amet sitLorem ipsum dolor amet sitLorem ipsum dolor amet sitLorem ipsum dolor amet sit
+		          			</p>
+		          		</div>
+		          	</div>
+					<div class="row justify-content-center mt-3 ">
+						<div class="col-xl-10 pb-3 record-styling">
+							<div class="row justify-content-center">
+								<div class="col-xl-8 col-lg-6">
+									<h5 class="pt-4 "><span class="reddish-color">Date of Birth</span> </h5>
+									<h5 class="pt-4 "><span class="reddish-color">Gender</span></h5>
+									<h5 class="pt-4"><span class="reddish-color">Occupation</span> </h5>
+									<h5 class="pt-4 "><span class="reddish-color">Work Place</span> </h5>
+									<h5 class="pt-4 "><span class="reddish-color">Amount</span></h5>
+								</div>
+								<div class="col-xl-4 col-lg-6">
+									<h5 class="pt-4 "><span class="justify-content-end dark-yellow-color">DD/MM/YYYY</span></h5>
+									<h5 class="pt-4 "> <span class="dark-yellow-color">Male</span></h5>
+									<h5 class="pt-4"><span class="dark-yellow-color">Banker</span></h5>
+									<h5 class="pt-4 "><span class="dark-yellow-color">Bank of Cananda</span></h5>
+									<h5 class="pt-4 "> <span class="dark-yellow-color">$52,000</span></h5>
+								</div>
+							</div>	
+						</div>
+
+						<div class="col-xl-10 pb-3 record-styling">
+							<div class="row justify-content-center">
+								<div class="col-xl-8 col-lg-6">
+									<h5 class="pt-4 "><span class="reddish-color">Work reference name</span> </h5>
+									<h5 class="pt-4 "><span class="reddish-color">work reference phone number</span></h5>
+								</div>
+								<div class="col-xl-4 col-lg-6">
+									<h5 class="pt-4 "><span class="justify-content-end dark-yellow-color">-</span></h5>
+									<h5 class="pt-4 "> <span class="dark-yellow-color">-</span></h5>
+							</div>	
+						</div>
+					</div>
+
+		        </div>
+	        
+	      	</div>
+	    </div>
+  	</div>
+  </div>
+  <!-- profile modal ends -->
+
+	<!-- footer starts -->
+	<footer id="footer" class="continer">
+	
+		<div class="row justify-content-center row-custom" >
+				<div class="col-4 ">
+					<h4 class="text-muted pb-2">RentEase</h4>
+					<span>
+	          			<h5>Lorem ipsum dolor amet sit</h5>
+	          			<h5>Lorem ipsum dolor amet sit</h5>
+          			</span>
+				</div>
+          		
+          		<div class="col-4 text-center">
+          			<h4 class="text-muted pb-2">Usefull Links</h4>
+          			<span>
+	          			<a href=""><h5>Vendors</h5></a>
+	          			<a href=""><h5>Contact Us</h5></a>
+	          			<a href=""><h5>FAQ</h5></a>
+	          			<a href=""><h5>About Us</h5></a>	
+          			</span>
+          		</div>
+ 				
+ 				<div class="col-4 text-right">
+          			<h4 class="text-muted pb-2">We are social</h4>
+          			<span>
+	          			<h5>
+	          				<a href=""><i class="fab fa-facebook-f text-muted"></i></a>
+	          				<a href=""><i class="fab fa-tumblr text-muted tumblr-icon"></i></a>
+	          				<a href=""><i class="fab fa-linkedin-in text-muted "></i></a>		
+	          			</h5>
+          			</span>
+          		</div>       		
+		</div>
+		<div class="row">
+			<div class="col-12 mt-lg-2 mt-md-4 mt-sm-5 mt-3">
+			<h6 class="text-muted"><i class="far fa-copyright"></i> RentEase 2018. All rights Reserved</h6>
+			</div>
+		</div>			
+	</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="assets/js/myScript.js"></script>
+<script type="text/javascript" src="assets/js/handlebars.min.js"></script>
+	<script type="text/javascript" src="assets/js/list.min.js"></script>
+
+
+	<script type="text/javascript" src="assets/js/chatScript.js"></script>
+
+
+	<script id="message-template" type="text/x-handlebars-template">
+  <li class="clearfix">
+      <span class="message-data float-right">
+              <img src="assets/images/userChat.png" alt="">
+      </span>
+    <span class="message other-message float-right">
+      {{messageOutput}}
+    </span>
+  </li>
+</script>
+
+<script id="message-response-template" type="text/x-handlebars-template">
+  <li>
+    <span class="message-data">
+      <img src="assets/images/userChat.png" alt="">
+    </span>
+    <span class="message my-message">
+      {{response}}
+    </span>
+  </li>
+</script>
+
+</body>
+</html>

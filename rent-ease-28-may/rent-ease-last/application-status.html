@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Application Status</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap-4.3/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+	
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/application-status-style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/sidebar-style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/common-style.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+
+
+</head>
+<body>
+<div style="overflow-x: hidden;">
+	
+
+<header>  
+ <!-- navbar starts -->
+		<nav id="navbar-cleaning" class="navbar navbar-expand-lg navbar-light shadow fixed-top">
+		  <a class="navbar-brand" href="index.html"><img src="assets/images/logo-black1.png"></a>
+
+		   <button type="button" id="sidebarCollapse" class="navbar-btn btn-style-sidebar d-lg-none mr-auto">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+            </button>
+
+		  
+		  <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  	<li class="nav-item mx-auto" id="seacrh-input">
+				<div class="form-group has-search" >
+				    <span class="fa fa-search form-control-feedback"></span>
+				    <input type="text" class="form-control form-control" placeholder="Search Appartment..">
+				</div>
+			</li>
+			
+		    <ul id="custom-ul" class="navbar-nav ml-auto">
+		    	<li class="nav-item" >
+			        <a class="nav-link" href="find-roommate.html">Find a roomate</a>
+			    </li>
+			    <li class="nav-item dropdown text-white">
+		        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Vendor<i class="fas fa-angle-down ml-2"></i>
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="">
+		          <a class="dropdown-item mb-2 mt-0" href="moving-service.html">Moving Services</a>
+		          <a class="dropdown-item mt-0" href="cleaning-service.html">Cleaning Service</a>
+		        </div>
+		      </li>
+
+			     <li class="nav-item" >
+			         <a class="nav-link" href="view-profile.html">Hello John<i class="fas fa-angle-down ml-2"></i>
+		        </a>
+			    </li>
+		    </ul>
+		  </div>
+		</nav>
+		<!-- navbar ends -->
+
+
+		
+</header>
+<!-- Header ends -->
+
+
+<!-- main body starts -->
+<main class="wrapper nav-top-margin">
+			<!-- left side bar portion starts -->
+		<nav id="sidebar">
+            <div class="sidebar-header">
+                <h3 class="dark-yellow-color">Residents <span class="d-block">Pages</span></h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                
+                <li>
+                    <a href="resident-home.html" class="font-weight-light">Home</a>
+                </li>
+                <li >
+                    <a href="rent-form.html" class="font-weight-light">Rent Form</a>
+                </li>
+                <li>
+                    <a href="profile-page.html" class="font-weight-light">Profile</a>
+                </li>
+                <li class="active">
+                    <a href="application-status.html" class="font-weight-light">Application Status</a>
+                </li>
+                
+                <li>
+                    <a href="saved-searches.html" class="font-weight-light">Saved Searches</a>
+                </li>
+                <li>
+                    <a href="notification.html" class="font-weight-light">Notifications</a>
+                </li>
+                <li>
+                    <a href="resident-messages.html" class="font-weight-light">Messages</a>
+                </li>
+                <li>
+                    <a href="index.html" class="font-weight-light">Logout</a>
+                </li>
+            </ul>
+        </nav>
+	<!-- left sidebar portion ends -->
+
+	<!-- main content starts -->
+	<div id="content">
+		
+
+		
+
+
+
+	<!-- rent applications ends -->
+<section id="profile-form-container" class="container-fluid">
+	<div class="row justify-content-center">
+		<div class="col p-sm-2 p-0">
+			<div class="row">
+				<div class="col-12 pl-0 pr-0">
+					<h5 class="reddish-color font-weight-bold">Application status</h5>		
+				</div>
+			</div>
+			
+			 <!-- Table starts -->
+		<div id="status-table" class="row">
+			<div  class="col-xl-11 col-12 table-responsive table-wrappper">
+				<table class="table head-table mb-0 ml-3 mt-2">
+					<thead class="text-white">
+				      <tr>
+				        <th class="font-weight-light th-apartment">Apartment Type</th>
+				        <th class="font-weight-light text-center th-location">Location</th>
+				        <th class="font-weight-light text-center th-application">Applicant Status</th>
+				        <th class="font-weight-light text-center th-action">Action</th>
+				      </tr>
+				 </thead>
+				</table>
+
+				<table  class="table mb-0 body-table">
+				    
+				    <tbody class="table-bordered" >
+				    	
+					    <tr class="text-center">
+					       <td>2 Bedrooms</td>
+					       <td class="pt-respon">Manitoba</td>
+					       <td class="pt-respon"><a href="" class="btn btn-sm btn-accepted">Accepted</a></td>
+					       <td class="btn-reserve"><span>Proceed to Payment</span> </td>
+					    </tr>
+					    <tr class="text-center">
+					       <td>2 Bedrooms</td>
+					       <td class="pt-respon">Montreal</td>
+					       <td class="pt-respon" ><a href="" class="btn btn-sm btn-incomplete">Incomplete</a></td>
+					       <td id="btn-upload-form" class="btn-upload-form"><span>Upload Gurantor form </span> </td>
+					    </tr>
+					    
+				    </tbody>
+			  </table>
+			</div>
+		</div>	
+			
+		</div>
+	</div>
+</section>
+
+
+
+	<!-- main content ends	 -->
+	</div>
+
+</main>
+<!-- main body ends -->
+
+
+
+		<!-- Uplaod guranter Form -->
+        <div  id="upload-form" class="guranter-container float-right mt-3" style="display: none;">
+        	<div class="row">
+       		 	<h6 id="btn-back-upload-form"  class="text-white p-2"><i class="fas fa-angle-left mr-2"></i><span>Back</span> </h6>
+       		 </div>     
+				
+				<!-- <div class="col form-group text-center image-upload">
+								<label for="file-input">
+									<img src="assets/images/upload-profile.png" style="cursor: pointer">
+								</label>
+								<input id="file-input" type="file" />
+								<h6 class="hard-brown"><small>Upload display picture</small></h6>	
+							</div> -->
+       		 
+        		<div class="row bg-white pt-2 pb-2 upload-wrapper">
+        			<div class="col-12">
+        				 <h6 class="hard-brown font-weight-bold pl-2 pt-1"><span>Upload from Here</span> 
+		        		  	<div class="float-right image-upload">
+		        		  		<label for="file-input">
+		        		  				<i class="fas fa-upload reddish-color" style="cursor: pointer;"></i>
+		        		  				<input id="file-input" type="file" style="display: none;" />
+		        		  		</label>
+		        		  	</div>
+        		 		 </h6>
+        			</div>
+        		</div>
+
+				
+
+        		<div class="row justify-content-center mt-5">
+        			<div class="col-12 text-center">
+        				<h6 class="text-white">Download form template
+							<a href="#" download="Gurantor-Form">
+							  <span class="dark-yellow-color" style="text-decoration: underline;">Here</span>
+							</a>
+        				 </h6>
+        			</div>
+        		</div>
+
+       		 <div class="row" style="position: absolute;bottom: 1em; ">
+       		 	<img src="assets/images/logo-white.png">
+       		 </div>
+        </div>
+
+		<!-- popup ends -->
+
+
+
+
+
+
+		<!-- Reserve popup starts -->
+<section id="reserve-popup" class="shadow pl-0 pr-0" style="display: none">
+	<div style="position: static;">
+		<div class="row bg-white justify-content-end">
+			<div class="col-12 p-4">
+				<h6 class="font-weight-light text-muted float-right head-text">
+					<span>Payment Summary</span>
+					<span class="text-danger font-weight-bold ml-1 mr-1 dash">____</span>
+					<span class="check-out">Check out</span>	
+					<span class="text-danger font-weight-bold ml-1 mr-1 dash"">____</span>
+					<span>Finish</span>
+				</h6>
+			</div>
+		</div>
+		<div class="row billing-detail-wrapper">
+			<div class="col-xl-12">
+				<div class="row">
+					<h5 class="reddish-color font-weight-bold">Billing Details</h5>
+				</div>
+			</div>
+			<div id="reserve-left" class="col-md-7">
+				
+				<!-- form starts -->
+				<div class="row mt-md-5">
+					<form id="billing-form">
+
+
+
+
+						<!-- contact name row -->
+						<div class="form-row mt-md-2">
+								<div class="col-md-6 col-12 form-group">
+									<label class="dark-yellow-color">Contact Name</label>
+										<input type="text" class="form-control" placeholder="Last Name">
+								</div>
+								<div class="col-md-6 col-12 form-group">
+									<label class="dark-yellow-color"> &nbsp</label>
+									<input type="text" class="form-control " placeholder="First Name">
+								</div>
+						</div>
+						
+						<!-- email row -->
+						<div class="form-row mt-md-2">
+							<div class="col form-group">
+								<label class="dark-yellow-color">Email Address</label>
+										<input type="email" class="form-control" >
+							</div>
+						</div>
+
+
+						<!-- Country row starts -->
+						<div class="form-row mt-md-2">
+							<div class="col form-group">
+								<label class="dark-yellow-color">Country</label>
+									  <select class="form-control" id="exampleFormControlSelect1">
+								      <option></option>
+								      <option>2</option>
+								      <option>3</option>
+								      <option>4</option>
+								      <option>5</option>
+							    	  </select> 
+							</div>
+						</div>
+							
+						<!-- codes -->
+						<div class="form-row mt-md-2">
+								<div class="col-md-6 col-12 form-group">
+									<label class="dark-yellow-color">State/Country</label>
+										<input type="text" class="form-control">
+								</div>
+								<div class="col-md-6 col-12 form-group">
+									<label class="dark-yellow-color">Zip/Postal Code</label>
+									<input type="text" class="form-control">
+								</div>
+						</div>
+
+							<!-- Payment Method -->
+						<div class="row mt-4 mb-4">
+							<h5 class="reddish-color font-weight-bold">Payment Methods</h5>
+						</div>
+						
+						<div class="form-row mt-md-2">
+							<div class="col form-group">
+								<div class="input-group mb-3">
+								  <div class="input-group-prepend">
+								    <span class="input-group-text bg-white"><i class="far fa-dot-circle reddish-color"></i></span>
+								  </div>
+								  <input type="text" class="form-control border-left-0 border-right-0" aria-label="Amount (to the nearest dollar)" placeholder="Credit Card">
+								  <div class="input-group-append">
+								    <span class="input-group-text bg-white"><img src="assets/images/visa.png"> <img src="assets/images/master-card.png"></span>
+								  </div>
+								</div>
+							</div>	
+						</div>
+							
+							<!-- card number -->
+						<div class="form-row mt-md-2">
+							<div class="col form-group">
+								<label class="dark-yellow-color">Card Number</label>
+								<div class="input-group mb-3">
+								 <input type="text" class="form-control  border-right-0" aria-label="Amount (to the nearest dollar)">
+								  <div class="input-group-append">
+								    <span class="input-group-text bg-white"><img src="assets/images/visa.png"> <img src="assets/images/master-card.png"></span>
+								  </div>
+								</div>
+							</div>
+						</div>	
+
+						<!-- Expiration date -->
+							<div class="form-row">
+							<div class="col-md-6 col-12 form-group">
+								<label class="dark-yellow-color">Expiration Date</label>
+									  <select class="form-control " id="exampleFormControlSelect1">
+								      <option>Month</option>
+								      <option>2</option>
+								      <option>3</option>
+								      <option>4</option>
+								      <option>5</option>
+							    	  </select> 
+							</div>
+							<div class="col-md-6 col-12 form-group">
+								<label class="dark-yellow-color">&nbsp</label>
+									<select class="form-control" id="exampleFormControlSelect1">
+								      <option>Year</option>
+								      <option>2</option>
+								      <option>3</option>
+								      <option>4</option>
+								      <option>5</option>
+							    	</select> 
+							</div>
+							<div class="col-md-6 col-12 form-group">
+								<label class="dark-yellow-color">Security Code</label>
+								<div class="input-group mb-3">
+								 <input type="text" class="form-control border-right-0" aria-label="Amount (to the nearest dollar)" placeholder="three digits">
+								  <div class="input-group-append">
+								    <span class="input-group-text bg-white"><i class="far fa-question-circle"></i></span>
+								  </div>
+								</div>
+							</div>
+						</div>
+
+						<!-- paypal -->
+						<div class="form-row mt-md-2">
+							<div class="col form-group">
+								<div class="input-group mb-3">
+								  <div class="input-group-prepend">
+								    <span class="input-group-text bg-white"><i class="far fa-circle reddish-color"></i></span>
+								  </div>
+								  <input type="text" class="form-control border-left-0 border-right-0" aria-label="Amount (to the nearest dollar)" placeholder="Pay Pal">
+								  <div class="input-group-append">
+								    <span class="input-group-text bg-white"><img src="assets/images/paypal.png"></span>
+								  </div>
+								</div>
+							</div>	
+						</div>
+
+
+						<div class="form-row justify-content-center">
+							<h6 class="dark-yellow-color payment-instruct ">By clicking the button,you accept our <span style="text-decoration: underline;">terms and conditions</span> </h6>
+						</div>
+							<!-- check box ends -->
+						    <div class="form-row ">
+								<div class="col form-group"> 
+									<a href="error-page.html" class="btn btn-sm text-white btn-payment">Make Payment</a>
+								</div> <!-- form-group end.// -->
+							</div><!-- form-group end.// -->                                   
+						</form>
+				</div>
+				
+			</div>
+
+			<div id="reserve-right" class="col-md-5">
+				 <div class="card border-0">
+				    <h6 class="card-title reddish-color font-weight-light p-2">Payment Summary <span class="text-muted">[<a href="">edit</a>]</span> </h6>
+				    <div class="card-body">
+				     <h6 class="reddish-color">1x Serviced Apartment <span class="float-right">$2000</span></h6>
+				      <p class="card-text reddish-color pr-5"><small>Convininent habitation for two people with adequate furniture and services</small> </p>
+				      <h6 style="border:1px solid rgb(172,147,44)"></h6>
+				      <h6 class="reddish-color mt-3">Moving Service<span class="float-right">$725.33</span></h6>
+				      <p class="card-text reddish-color pr-5"><small>Winnipeg to onterio <span class="d-block">clothing and furniture</span> <span>03/04/2019</span></small> </p>
+				      <h6 style="border:1px solid rgb(172,147,44)"></h6>
+				      <h6 class="reddish-color"><span class="float-right"><span class="font-weight-light mr-3">Sub Total:</span> $2725.33</span></h6>
+				    </div>
+				  </div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+<!-- end reserve popup -->
+
+
+
+
+
+
+
+  		<!-- footer starts -->
+	<footer id="footer" class="continer">
+	
+		<div class="row justify-content-center row-custom" >
+				<div class="col-4 ">
+					<h4 class="text-muted pb-2">RentEase</h4>
+					<span>
+	          			<h5>Lorem ipsum dolor amet sit</h5>
+	          			<h5>Lorem ipsum dolor amet sit</h5>
+          			</span>
+				</div>
+          		
+          		<div class="col-4 text-center">
+          			<h4 class="text-muted pb-2">Usefull Links</h4>
+          			<span>
+	          			<a href=""><h5>Vendors</h5></a>
+	          			<a href=""><h5>Contact Us</h5></a>
+	          			<a href=""><h5>FAQ</h5></a>
+	          			<a href=""><h5>About Us</h5></a>	
+          			</span>
+          		</div>
+ 				
+ 				<div class="col-4 text-right tumblr-icon-head-p">
+          			<h4 class="text-muted pb-2 respon-h4">We are social</h4>
+          			<span>
+	          			<h5>
+	          				<a href=""><i class="fab fa-facebook-f text-muted"></i></a>
+	          				<a href=""><i class="fab fa-tumblr text-muted tumblr-icon"></i></a>
+	          				<a href=""><i class="fab fa-linkedin-in text-muted "></i></a>		
+	          			</h5>
+          			</span>
+          		</div>       		
+		</div>
+		<div class="row">
+			<div class="col-12 mt-lg-0 mt-3">
+			<h6 class="text-muted"><i class="far fa-copyright"></i> RentEase 2018. All rights Reserved</h6>
+			</div>
+		</div>	
+			
+					
+	</footer>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script type="text/javascript" src="assets/bootstrap-4.3\js\bootstrap.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+<script src="assets/js/myScript.js"></script>
+ 
+
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
+<!-- <script src="assets/js/main.js"></script> -->
+
+
+</body>
+</html>

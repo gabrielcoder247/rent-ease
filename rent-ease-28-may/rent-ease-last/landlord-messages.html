@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Landlord-Messages</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap-4.3/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+	
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/landlord-messages-style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/sidebar-style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/chat-style.css">
+
+
+</head>
+<body>
+
+
+<header>
+ <!-- navbar starts -->
+		<nav id="navbar-cleaning" class="navbar navbar-expand-md navbar-light shadow fixed-top">
+		  <a class="navbar-brand" href="index.html"><img src="assets/images/logo-black1.png"></a>
+
+		   <button type="button" id="sidebarCollapse" class="navbar-btn btn-style-sidebar d-lg-none mr-auto">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+            </button>
+
+		  
+		  <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  	<li class="nav-item mx-auto" id="seacrh-input">
+				<div class="form-group has-search" >
+				    <span class="fa fa-search form-control-feedback"></span>
+				    <input type="text" class="form-control form-control" placeholder="Search Appartment..">
+				</div>
+			</li>
+			
+		    <ul id="custom-ul" class="navbar-nav ml-auto">
+		    
+			     <li class="nav-item" >
+			         <a class="nav-link" href="view-profile.html">Hello John<i class="fas fa-angle-down ml-2"></i>
+		        </a>
+			    </li>
+		    </ul>
+		  </div>
+		</nav>
+		<!-- navbar ends -->
+
+
+		
+</header>
+<!-- Header ends -->
+
+
+<!-- main body starts -->
+<main class="wrapper nav-top-margin">
+			<!-- left side bar portion starts -->
+		<nav id="sidebar">
+            <div class="sidebar-header">
+                <h3 class="dark-yellow-color">Landlords <span class="d-block">Pages</span></h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                
+                <li>
+                    <a href="landlord-dashboard.html" class="font-weight-light">Dashboard</a>
+                </li>
+                <li>
+                    <a href="rent-application.html" class="font-weight-light">Rent Applications</a>
+                </li>
+                <li>
+                    <a href="properties-listing.html" class="font-weight-light">Properties Listing</a>
+                </li>
+                <li>
+                    <a href="financials.html" class="font-weight-light">Financials</a>
+                </li>
+                
+                <li class="active">
+                    <a href="landlord-messages.html" class="font-weight-light">Messages</a>
+                </li>
+                <li>
+                    <a href="#" class="font-weight-light">Account Settings</a>
+                </li>
+                <li>
+                    <a href="index.html" class="font-weight-light">Logout</a>
+                </li>
+            </ul>
+        </nav>
+	<!-- left sidebar portion ends -->
+
+	<!-- main content starts -->
+	<div id="content" class="p-0">
+				<!-- content partition starts -->
+    <section class="row">
+    	<!-- chat list starts -->
+    	<div id="chat-list" class="col-sm-4 col-3 shadow p-0">
+    		<h5 class="hard-brown font-weight-bold p-3">Chat List</h5>
+    		<div class="col-12 p-2 chat-active border-b-brown border-t-brown">
+    			 <h6 class="reddish-color">John Doe</h6>
+    		</div>
+    		<div class="col-12 p-2 border-b-brown">
+    			 <h6 class="pl-sm-4 pl-3 reddish-color">John Doe</h6>
+    		</div>
+    		<div class="col-12 p-2 border-b-brown">
+    			 <h6 class="pl-sm-4 pl-3 light-grey">John Doe</h6>
+    		</div>
+    		<div class="col-12 p-2 border-b-brown">
+    			 <h6 class="pl-sm-4 pl-3 light-grey">John Doe</h6>
+    		</div>
+    	</div>
+    	<!-- chat list ends -->
+
+    	<!-- chat box starts -->
+		<div class="col-sm-8 col-9 pl-0 pr-0">
+			<!-- chat box starts -->
+			<div class="clearfix chat-wrapper">    
+    <div class="chat">
+      <div class="chat-header clearfix col-12">
+          <div class="chat-with col-6 d-inline">John Doe</div>
+        <img src="assets/images/profile-chat.png" alt="avatar" />
+      </div> <!-- end chat-header -->
+      
+      <div class="chat-history">
+        <ul>
+          <li class="clearfix">
+            <span class="message-data float-right">
+            	<img src="assets/images/userChat.png" alt="">              
+            </span>
+            <span class="message other-message float-right">
+              Hi Vincent, how are you? How is the project coming along?
+            </span>
+          </li>
+          
+          <li>
+            <span class="message-data">
+              <img src="assets/images/userChat.png" alt="">
+            </span>
+            <span class="message my-message">
+              Are we meeting today? Project has been already finished and I have results to show you.
+            </span>
+          </li>
+          
+          <li class="clearfix">
+            <span class="message-data float-right">
+              <img src="assets/images/userChat.png" alt="">              
+            </span>
+            <span class="message other-message float-right">
+              Well I am not sure. The rest of the team is not here yet. Maybe in an hour or so? Have you faced any problems at the last phase of the project?
+            </span>
+          </li>
+			
+			<li>
+            <span class="message-data">
+              <img src="assets/images/userChat.png" alt="">
+            </span>
+            <span class="message my-message">
+              Are we meeting today? Project has been already finished and I have results to show you.
+            </span>
+          </li>
+          
+          <li class="clearfix">
+            <span class="message-data float-right">
+              <img src="assets/images/userChat.png" alt="">              
+            </span>
+            <span class="message other-message float-right">
+              Well I am not sure. The rest of the team is not here yet. Maybe in an hour or so? Have you faced any problems at the last phase of the project?
+            </span>
+          </li>          
+          <li>
+            <span class="message-data">
+              <img src="assets/images/userChat.png" alt="">
+            </span>
+            <span class="message my-message">
+              Actually everything was fine. I'm very excited to show this to our team.
+            </span>
+          </li>
+          
+          <li>
+            <span class="message-data">
+              <img src="assets/images/userChat.png" alt="">
+            </span>
+            <i class="fa fa-circle online"></i>
+            <i class="fa fa-circle online" style="color: #AED2A6"></i>
+            <i class="fa fa-circle online" style="color:#DAE9DA"></i>
+          </li>
+          
+        </ul>
+        
+      </div> <!-- end chat-history -->
+      
+      <div class="chat-message clearfix">
+        <textarea name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="1"></textarea>
+        
+        <span class="myButton"><img src="assets/images/btnSend.png" alt="Send"></span>
+
+      </div> <!-- end chat-message -->
+      <div class="logo-div p-1">
+      	<img src="assets/images/logo-brown.png">
+      </div> <!-- end chat logo -->
+    </div> <!-- end chat -->
+    
+  </div> <!-- end container -->
+		<!-- chat box ends -->
+
+
+
+		</div>
+    	<!-- chat box ends -->
+    </section>
+
+
+      </div>      
+	<!-- main content ends	 -->
+
+	</div>    
+
+
+</main>
+<!-- main body ends -->
+
+
+
+
+
+
+
+  		<!-- footer starts -->
+	<footer id="footer" class="continer">
+	
+		<div class="row justify-content-center row-custom" >
+				<div class="col-4 ">
+					<h4 class="text-muted pb-2">RentEase</h4>
+					<span>
+	          			<h5>Lorem ipsum dolor amet sit</h5>
+	          			<h5>Lorem ipsum dolor amet sit</h5>
+          			</span>
+				</div>
+          		
+          		<div class="col-4 text-center">
+          			<h4 class="text-muted pb-2">Usefull Links</h4>
+          			<span>
+	          			<a href=""><h5>Vendors</h5></a>
+	          			<a href=""><h5>Contact Us</h5></a>
+	          			<a href=""><h5>FAQ</h5></a>
+	          			<a href=""><h5>About Us</h5></a>	
+          			</span>
+          		</div>
+ 				
+ 				<div class="col-4 text-right tumblr-icon-head-p">
+          			<h4 class="text-muted pb-2 respon-h4">We are social</h4>
+          			<span>
+	          			<h5>
+	          				<a href=""><i class="fab fa-facebook-f text-muted"></i></a>
+	          				<a href=""><i class="fab fa-tumblr text-muted tumblr-icon"></i></a>
+	          				<a href=""><i class="fab fa-linkedin-in text-muted "></i></a>		
+	          			</h5>
+          			</span>
+          		</div>       		
+		</div>
+		<div class="row">
+			<div class="col-12 mt-lg-0 mt-3">
+			<h6 class="text-muted"><i class="far fa-copyright"></i> RentEase 2018. All rights Reserved</h6>
+			</div>
+		</div>	
+			
+					
+	</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script type="text/javascript" src="assets/bootstrap-4.3\js\bootstrap.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+ 
+
+<script type="text/javascript" src="assets/js/handlebars.min.js"></script>
+	<script type="text/javascript" src="assets/js/list.min.js"></script>
+
+
+	<script type="text/javascript" src="assets/js/chatScript.js"></script>
+
+
+	<script id="message-template" type="text/x-handlebars-template">
+  <li class="clearfix">
+      <span class="message-data float-right">
+              <img src="assets/images/userChat.png" alt="">
+      </span>
+    <span class="message other-message float-right">
+      {{messageOutput}}
+    </span>
+  </li>
+</script>
+
+<script id="message-response-template" type="text/x-handlebars-template">
+  <li>
+    <span class="message-data">
+      <img src="assets/images/userChat.png" alt="">
+    </span>
+    <span class="message my-message">
+      {{response}}
+    </span>
+  </li>
+</script>
+ 
+ <!-- sidebar js -->
+ <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
